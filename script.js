@@ -169,12 +169,3 @@ mainContentContainer.style.maxWidth = '1200px';
 mainContentContainer.style.backgroundColor = 'red';
 mainContentContainer.textContent = 'red';
 mainContainer.appendChild(mainContentContainer);
-
-// mainContainer.appendChild(headingContainer);
-const headingContainer = document.createElement('div');
-headingContainer.id = 'container';
-headingContainer.style.height = '200px';
-
-const heading = document.createElement('h1');
-heading.textContent = 'Meet Our Food Experts';
-
