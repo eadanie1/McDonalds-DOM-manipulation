@@ -25,7 +25,7 @@ allButtons.forEach(button => {
     button.style.cursor = 'pointer';
 });
 
-// // HEADER CONTAINER AND HEADER
+// HEADER CONTAINER AND HEADER
 
 const headerContainer = document.createElement('header');
 headerContainer.id = 'header-container';
@@ -118,15 +118,16 @@ locationPinIcon.id = 'location-pin-icon';
 locationPinIcon.style.width = '17px';
 locationPinIcon.style.marginRight = '5px';
 
-const locationLink = document.createElement('div');
+const locationLink = document.createElement('a');
 locationLink.id = 'location-link';
+locationLink.href = 'https://www.mcdonalds.com/us/en-us/restaurant-locator.html';
 locationLink.style.color = 'rgb(0,107,174)';
 locationLink.style.display = 'flex';
 locationLink.style.justifyContent = 'center';
 locationLink.style.alignItems = 'center';
 locationLink.style.textDecoration = 'underline';
 
-const orderNowButton = document.createElement('div');
+const orderNowButton = document.createElement('button');
 orderNowButton.id = 'order-now-button';
 orderNowButton.style.backgroundColor = 'rgb(255, 188, 13)';
 orderNowButton.style.border = 'none';
@@ -149,12 +150,129 @@ overlay.style.justifyContent = 'center';
 overlay.style.zIndex = '-1';
 
 // probably change below to onclick JS function
-const orderNowButtonActive = document.createElement('div');
-orderNowButtonActive.id = 'order-now-button-active';
-orderNowButtonActive.style.backgroundColor = 'rgba(0,0,0,0.4)';
-orderNowButtonActive.style.zIndex = '50';
+const orderNowButtonActiveOverlay = document.createElement('div');
+orderNowButtonActiveOverlay.id = 'order-now-button-active-overlay';
+orderNowButtonActiveOverlay.style.backgroundColor = 'rgba(0,0,0,0.4)';
+orderNowButtonActiveOverlay.style.zIndex = '50';
 
-// // MAIN CONTAINER AND MAIN CONTENT CONTAINER
+// probably change below to onclick JS function
+const orderNowButtonActiveModal = document.createElement('div');
+orderNowButtonActiveModal.id = 'order-now-button-active-modal';
+orderNowButtonActiveModal.style.opacity = '1';
+orderNowButtonActiveModal.style.zIndex = '50';
+
+const modal = document.createElement('div');
+modal.id = 'modal';
+modal.style.backgroundColor = 'white';
+modal.style.width = '780px';
+modal.style.height = '820px';
+modal.style.borderRadius = '4px';
+modal.style.boxShadow = '-15px 15px 30px rgba(0,0,0,0.25), 15px 15px 30px rgba(0,0,0,0.25)';
+modal.style.display = 'flex';
+modal.style.flexDirection = 'column';
+modal.style.alignItems = 'center';
+modal.style.opacity = '0';
+modal.style.zIndex = '-1';
+
+const modalTitle = document.createElement('div');
+modalTitle.id = 'modal-title';
+modalTitle.style.fontSize = '24px';
+modalTitle.style.fontWeight = '700';
+modalTitle.style.margin = '48px 0 40px 0';
+
+const modalRadioGrid = document.createElement('div');
+modalRadioGrid.id = 'modal-radio-grid';
+modalRadioGrid.style.display = 'flex';
+modalRadioGrid.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
+modalRadioGrid.style.columnGap = '50px';
+modalRadioGrid.style.alignItems = 'center';
+
+const modalIcons = document.createElement('div');
+modalIcons.id = 'modal-icons';
+modalIcons.style.width = '120px';
+modalIcons.style.margin = '66px 0 36px 0';
+
+const radioTitle = document.createElement('div');
+radioTitle.id = 'radio-title';
+radioTitle.style.fontSize = '12px';
+radioTitle.style.marginBottom = '8px';
+
+const radioButton = document.createElement('div');
+radioTitle.id = 'radio-title';
+radioTitle.style.width = '24px';
+radioTitle.style.height = '24px';
+
+const modalDisclaimer = document.createElement('div');
+modalDisclaimer.id = 'modal-disclaimer';
+modalDisclaimer.style.fontSize = '11px';
+modalDisclaimer.style.width = '400px';
+modalDisclaimer.style.marginTop = '32px';
+modalDisclaimer.style.textAlign = 'left';
+modalDisclaimer.style.lineHeight = '16px';
+
+const modalFaded = document.createElement('div');
+modalFaded.id = 'modal-faded';
+modalFaded.style.color = 'rgba(0,0,0,0.3)';
+
+const modalReadMore = document.createElement('div');
+modalReadMore.id = 'modal-read-more';
+modalReadMore.style.marginTop = '8px';
+modalReadMore.style.display = 'flex';
+modalReadMore.style.flexDirection = 'column';
+modalReadMore.style.alignItems = 'center';
+
+const modalDownArrow = document.createElement('div');
+modalDownArrow.id = 'modal-down-arrow';
+modalDownArrow.style.width = '16px';
+modalDownArrow.style.marginTop = '8px';
+
+const flexboxModalFakeButtons = document.createElement('div');
+flexboxModalFakeButtons.id = 'flexbox-modal-fake-buttons';
+flexboxModalFakeButtons.style.display = 'flex';
+flexboxModalFakeButtons.style.alignItems = 'center';
+flexboxModalFakeButtons.style.justifyContent = 'space-between';
+flexboxModalFakeButtons.style.padding = '0 15px';
+flexboxModalFakeButtons.style.marginTop = '48px';
+
+const modalButton1 = document.createElement('button');
+modalButton1.id = 'modal-button1';
+modalButton1.style.backgroundColor = 'rgb(255, 255,255)';
+modalButton1.style.border = '1px solid rgb(200,200,200)';
+modalButton1.style.borderRadius = '4px';
+modalButton1.style.padding = '13px 57px';
+modalButton1.style.fontSize = '16px';
+modalButton1.style.lineHeight = '24px';
+
+const modalButton2 = document.createElement('button');
+modalButton2.id = 'modal-button2';
+modalButton2.style.backgroundColor = 'rgb(255, 188, 13)';
+modalButton2.style.border = 'none';
+modalButton2.style.borderRadius = '4px';
+modalButton2.style.padding = '13px 57px';
+modalButton2.style.fontSize = '16px';
+modalButton2.style.lineHeight = '24px';
+
+const bottomHeaderLinksContainer = document.createElement('div');
+bottomHeaderLinksContainer.id = 'bottom-header-links-container';
+bottomHeaderLinksContainer.style.display = 'flex';
+bottomHeaderLinksContainer.style.paddingBottom = '15px';
+
+const bottomHeaderLinksContainerUl = document.createElement('ul');
+bottomHeaderLinksContainerUl.id = 'bottom-header-links-container-ul';
+bottomHeaderLinksContainerUl.style.display = 'inline';
+bottomHeaderLinksContainerUl.style.padding = '0';
+
+const bottomHeaderLinksContainerLi = document.createElement('li');
+bottomHeaderLinksContainerUl.id = 'bottom-header-links-container-li';
+bottomHeaderLinksContainerUl.style.listStyleType = 'none';
+bottomHeaderLinksContainerUl.style.display = 'inline';
+
+const headerLogoContainer = document.createElement('div');
+headerLogoContainer.id = 'header-logo-container';
+headerLogoContainer.style.display = 'flex';
+headerLogoContainer.style.alignItems = 'center';
+
+// MAIN CONTAINER AND MAIN CONTENT CONTAINER
 
 const mainContainer = document.createElement('div');
 mainContainer.id = 'main-container';
