@@ -10,6 +10,13 @@ document.body.style.fontSize = '16px';
 document.body.style.color = 'rgb(41,41,41)';
 document.body.style.lineHeight = '22px';
 
+// GENERAL: ANCHOR ELEMENTS
+
+const allLinks = document.querySelectorAll('a');
+allLinks.forEach(link => {
+    link.style.color = 'rgb(41,41,41)';
+    link.style.textDecoration = 'none';
+});
 
 // GENERAL: BUTTONS
 
@@ -37,11 +44,23 @@ headerContainer.style.gridTemplateColumns = '108px 1fr';
 headerContainer.style.columnGap = '62px';
 headerContainer.style.justifyContent = 'space-between';
 headerContainer.style.padding = '0 0 0 0';
-headerContainer.textContent = 'yowza';
-// remove above text later
 header.appendChild(headerContainer);
-// come back and check per HTML how to add 
-// appendChild properties per each CSS section
+
+const headerLogoContainer = document.createElement('div');
+headerLogoContainer.id = 'header-logo-container';
+headerLogoContainer.style.display = 'flex';
+headerLogoContainer.style.alignItems = 'center';
+headerContainer.appendChild(headerLogoContainer);
+
+const archesLogoLink = document.createElement('a');
+archesLogoLink.id = 'arches-logo-link';
+archesLogoLink.href = `https://www.mcdonalds.com/us/en-us.html`;
+headerLogoContainer.appendChild(archesLogoLink);
+
+const archesHeaderLogo = document.createElement('img');
+archesHeaderLogo.id = 'arches-header-logo';
+archesHeaderLogo.src = 'icons/arches-logo_108x108.jpg';
+archesLogoLink.appendChild(archesHeaderLogo);
 
 const headerMainLinksContainer = document.createElement('div');
 headerMainLinksContainer.id = 'header-main-links-container';
@@ -49,6 +68,8 @@ headerMainLinksContainer.style.display = 'flex';
 headerMainLinksContainer.style.flexDirection = 'column';
 headerMainLinksContainer.style.justifyContent = 'space-between';
 headerContainer.appendChild(headerMainLinksContainer);
+
+// HEADER TOP LINKS CONTAINER
 
 const topHeaderLinksContainer = document.createElement('div');
 topHeaderLinksContainer.id = 'top-header-links-container';
@@ -64,74 +85,116 @@ topLeftHeaderLinksContainer.style.display = 'flex';
 topLeftHeaderLinksContainer.style.alignItems = 'center';
 topHeaderLinksContainer.appendChild(topLeftHeaderLinksContainer);
 
+const headerTopLinksLanguage = document.createElement('a');
+headerTopLinksLanguage.id = 'header-top-links-language';
+headerTopLinksLanguage.href = '';
+headerTopLinksLanguage.textContent = 'Language';
+headerTopLinksLanguage.style.color = 'rgb(41,41,41)';
+headerTopLinksLanguage.style.textDecoration = 'none';
+headerTopLinksLanguage.style.margin = '0 30px 0 0';
+topLeftHeaderLinksContainer.appendChild(headerTopLinksLanguage);
+
+const headerTopLinksLanguageDownArrow = document.createElement('img');
+headerTopLinksLanguageDownArrow.id = 'header-top-links-language-down-arrow';
+headerTopLinksLanguageDownArrow.src = 'icons/downarrow.png';
+headerTopLinksLanguageDownArrow.style.marginLeft = '5px';
+headerTopLinksLanguageDownArrow.style.width = '9px';
+headerTopLinksLanguage.appendChild(headerTopLinksLanguageDownArrow);
+
+const headerTopLinksEmail = document.createElement('a');
+headerTopLinksEmail.id = 'header-top-links-email';
+headerTopLinksEmail.href = `https://www.mcdonalds.com/us/en-us/mcdonalds-
+email-signup.html`;
+headerTopLinksEmail.textContent = 'Sign Up for Email';
+headerTopLinksEmail.style.color = 'rgb(41,41,41)';
+headerTopLinksEmail.style.textDecoration = 'none';
+headerTopLinksEmail.style.margin = '0 30px 0 0';
+topLeftHeaderLinksContainer.appendChild(headerTopLinksEmail);
+
+const headerTopLinksCareers = document.createElement('a');
+headerTopLinksCareers.id = 'header-top-links-careers';
+headerTopLinksCareers.href = `https://www.mcdonalds.com/us/en-us/
+mcdonalds-careers.html`;
+headerTopLinksCareers.textContent = 'Careers';
+headerTopLinksCareers.style.color = 'rgb(41,41,41)';
+headerTopLinksCareers.style.textDecoration = 'none';
+headerTopLinksCareers.style.margin = '0 30px 0 0';
+topLeftHeaderLinksContainer.appendChild(headerTopLinksCareers);
+
 const topRightHeaderLinksContainer = document.createElement('div');
 topRightHeaderLinksContainer.id = 'top-right-header-links-container';
 topRightHeaderLinksContainer.style.display = 'flex';
 topRightHeaderLinksContainer.style.alignItems = 'center';
 topHeaderLinksContainer.appendChild(topRightHeaderLinksContainer);
 
-// const hamburgerMenu = document.createElement('div');
-// hamburgerMenu.id = 'hamburger-menu';
-// hamburgerMenu.style.width = '22px';
-// hamburgerMenu.style.marginLeft = '10px';
+const headerTopLinksSearch = document.createElement('a');
+headerTopLinksSearch.id = 'header-top-links-search';
+headerTopLinksSearch.href = `https://www.mcdonalds.com/us/en-us/
+search-results.html`;
+headerTopLinksSearch.style.display = 'flex';
+headerTopLinksSearch.style.justifyContent = 'center';
+headerTopLinksSearch.style.alignItems = 'center';
+headerTopLinksSearch.style.textDecoration = 'none';
+headerTopLinksSearch.style.color = 'rgb(41,41,41)';
+headerTopLinksSearch.style.textDecoration = 'none';
+headerTopLinksSearch.style.margin = '0 30px 0 0';
+topRightHeaderLinksContainer.appendChild(headerTopLinksSearch);
 
-const headerTopLinks = document.createElement('div');
-headerTopLinks.id = 'header-top-links';
-headerTopLinks.style.margin = '0 30px 0 0';
-
-const headerBottomLinks = document.createElement('div');
-headerBottomLinks.id = 'header-bottom-links';
-headerBottomLinks.style.margin = '0 25px 0 0';
-
-const linkText = document.createElement('div');
-linkText.id = 'link-text';
-linkText.style.lineHeight = '0px';
-
-const downArrowSmallIcon = document.createElement('div');
-downArrowSmallIcon.id = 'down-arrow-small-icon';
-downArrowSmallIcon.style.marginLeft = '5px';
-downArrowSmallIcon.style.width = '9px';
-
-const downArrowLargeIcon = document.createElement('div');
-downArrowLargeIcon.id = 'down-arrow-large-icon';
-downArrowLargeIcon.style.marginLeft = '5px';
-downArrowLargeIcon.style.width = '12px';
-
-const searchIcon = document.createElement('div');
+const searchIcon = document.createElement('img');
 searchIcon.id = 'search-icon';
+searchIcon.src = 'icons/search-icon.png';
 searchIcon.style.width = '16px';
 searchIcon.style.height = '15px';
 searchIcon.style.marginRight = '5px';
+headerTopLinksSearch.appendChild(searchIcon);
 
-const searchLink = document.createElement('div');
-searchLink.id = 'search-link';
-searchLink.style.display = 'flex';
-searchLink.style.justifyContent = 'center';
-searchLink.style.alignItems = 'center';
-searchLink.style.textDecoration = 'none';
+const linkText = document.createElement('div');
+linkText.id = 'link-text';
+linkText.textContent = 'Search';
+linkText.style.lineHeight = '0px';
+headerTopLinksSearch.appendChild(linkText);
 
-const locationPinIcon = document.createElement('div');
+const headerTopLinksLocation = document.createElement('a');
+headerTopLinksLocation.id = 'header-top-links-location';
+headerTopLinksLocation.href = `https://www.mcdonalds.com/us/
+en-us/restaurant-locator.html`;
+headerTopLinksLocation.style.display = 'flex';
+headerTopLinksLocation.style.justifyContent = 'center';
+headerTopLinksLocation.style.alignItems = 'center';
+headerTopLinksLocation.style.textDecoration = 'none';
+headerTopLinksLocation.style.color = 'rgb(0,107,174)';
+// headerTopLinksLocation.style.textDecoration = 'none';
+headerTopLinksLocation.style.textDecoration = 'underline';
+headerTopLinksLocation.style.margin = '0 30px 0 0';
+topRightHeaderLinksContainer.appendChild(headerTopLinksLocation);
+
+const locationPinIcon = document.createElement('img');
 locationPinIcon.id = 'location-pin-icon';
+locationPinIcon.src = 'icons/location-pin.png';
 locationPinIcon.style.width = '17px';
+locationPinIcon.style.height = '19px';
 locationPinIcon.style.marginRight = '5px';
+headerTopLinksLocation.appendChild(locationPinIcon);
 
-const locationLink = document.createElement('a');
-locationLink.id = 'location-link';
-locationLink.href = 'https://www.mcdonalds.com/us/en-us/restaurant-locator.html';
-locationLink.style.color = 'rgb(0,107,174)';
-locationLink.style.display = 'flex';
-locationLink.style.justifyContent = 'center';
-locationLink.style.alignItems = 'center';
-locationLink.style.textDecoration = 'underline';
+const linkTextLocation = document.createElement('div');
+linkTextLocation.id = 'link-text-location';
+linkTextLocation.textContent = 'Change your Location';
+linkTextLocation.style.lineHeight = '0px';
+headerTopLinksLocation.appendChild(linkTextLocation);
 
 const orderNowButton = document.createElement('button');
 orderNowButton.id = 'order-now-button';
+orderNowButton.textContent = 'Order Now';
 orderNowButton.style.backgroundColor = 'rgb(255, 188, 13)';
 orderNowButton.style.border = 'none';
 orderNowButton.style.borderRadius = '4px';
 orderNowButton.style.padding = '8px 25px';
 orderNowButton.style.fontSize = '16px';
 orderNowButton.style.lineHeight = '24px';
+orderNowButton.style.cursor = 'pointer';
+topRightHeaderLinksContainer.appendChild(orderNowButton);
+
+// MODAL
 
 const overlay = document.createElement('div');
 overlay.id = 'overlay';
@@ -249,6 +312,8 @@ modalButton2.style.padding = '13px 57px';
 modalButton2.style.fontSize = '16px';
 modalButton2.style.lineHeight = '24px';
 
+// HEADER BOTTOM LINKS CONTAINER
+
 const bottomHeaderLinksContainer = document.createElement('div');
 bottomHeaderLinksContainer.id = 'bottom-header-links-container';
 bottomHeaderLinksContainer.style.display = 'flex';
@@ -259,17 +324,54 @@ const bottomHeaderLinksContainerUl = document.createElement('ul');
 bottomHeaderLinksContainerUl.id = 'bottom-header-links-container-ul';
 bottomHeaderLinksContainerUl.style.display = 'inline';
 bottomHeaderLinksContainerUl.style.padding = '0';
+bottomHeaderLinksContainer.appendChild(bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLi = document.createElement('li');
-bottomHeaderLinksContainerUl.id = 'bottom-header-links-container-li';
-bottomHeaderLinksContainerUl.style.listStyleType = 'none';
-bottomHeaderLinksContainerUl.style.display = 'inline';
+const bottomHeaderLinksContainerLiMenu = document.createElement('li');
+bottomHeaderLinksContainerLiMenu.id = 'bottom-header-links-container-li-menu';
+bottomHeaderLinksContainerLiMenu.textContent = 'Our Menu';
+bottomHeaderLinksContainerLiMenu.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiMenu.style.display = 'inline';
+bottomHeaderLinksContainerLiMenu.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiMenu);
 
-const headerLogoContainer = document.createElement('div');
-headerLogoContainer.id = 'header-logo-container';
-headerLogoContainer.style.display = 'flex';
-headerLogoContainer.style.alignItems = 'center';
-headerContainer.appendChild(headerLogoContainer);
+const downArrowLargeIcon = document.createElement('img');
+downArrowLargeIcon.id = 'down-arrow-large-icon';
+downArrowLargeIcon.src = 'icons/downarrow.png';
+downArrowLargeIcon.style.marginLeft = '5px';
+downArrowLargeIcon.style.width = '12px';
+bottomHeaderLinksContainerLiMenu.appendChild(downArrowLargeIcon);
+
+const bottomHeaderLinksContainerLiApp = document.createElement('li');
+bottomHeaderLinksContainerLiApp.id = 'bottom-header-links-container-li-app';
+bottomHeaderLinksContainerLiApp.style.display = 'inline';
+bottomHeaderLinksContainerLiApp.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiApp);
+
+const bottomHeaderLinksContainerLiAppLink = document.createElement('a');
+bottomHeaderLinksContainerLiAppLink.id = 'bottom-header-links-container-li-app-link';
+bottomHeaderLinksContainerLiAppLink.href = `https://www.mcdonalds.com/us/
+en-us/download-app.html`;
+bottomHeaderLinksContainerLiAppLink.textContent = 'Download App';
+bottomHeaderLinksContainerLiAppLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiAppLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiAppLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiApp.appendChild(bottomHeaderLinksContainerLiAppLink);
+
+const bottomHeaderLinksContainerLiRew = document.createElement('li');
+bottomHeaderLinksContainerLiRew.id = 'bottom-header-links-container-li-rew';
+bottomHeaderLinksContainerLiRew.style.display = 'inline';
+bottomHeaderLinksContainerLiRew.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiRew);
+
+const bottomHeaderLinksContainerLiRewLink = document.createElement('a');
+bottomHeaderLinksContainerLiRewLink.id = 'bottom-header-links-container-li-rew-link';
+bottomHeaderLinksContainerLiRewLink.href = `https://www.mcdonalds.com/us/
+en-us/mymcdonalds.html`;
+bottomHeaderLinksContainerLiRewLink.textContent = 'MyMcDonald\'s rewards';
+bottomHeaderLinksContainerLiRewLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiRewLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiRewLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiRew.appendChild(bottomHeaderLinksContainerLiRewLink);
 
 // MAIN CONTAINER AND MAIN CONTENT CONTAINER
 
