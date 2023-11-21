@@ -27,26 +27,26 @@ allButtons.forEach(button => {
 
 // HEADER CONTAINER AND HEADER
 
-const headerContainer = document.createElement('header');
-headerContainer.id = 'header-container';
-headerContainer.style.height = '118px';
-headerContainer.style.boxShadow = '0 2px 5px rgba(0,0,0,0.06)';
-headerContainer.style.display = 'flex';
-headerContainer.style.justifyContent = 'center';
-headerContainer.style.padding = '15px 0 0 0';
-document.body.appendChild(headerContainer);
+const header = document.createElement('header');
+header.id = 'header-container';
+header.style.height = '118px';
+header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.06)';
+header.style.display = 'flex';
+header.style.justifyContent = 'center';
+header.style.padding = '15px 0 0 0';
+document.body.appendChild(header);
 
-const header = document.createElement('div');
-header.id = 'header';
-header.style.width = '1170px';
-header.style.display = 'grid';
-header.style.gridTemplateColumns = '108px 1fr';
-header.style.columnGap = '62px';
-header.style.justifyContent = 'space-between';
-header.style.padding = '0 0 0 0';
-header.textContent = 'yowza';
+const headerContainer = document.createElement('div');
+headerContainer.id = 'header-container';
+headerContainer.style.width = '1170px';
+headerContainer.style.display = 'grid';
+headerContainer.style.gridTemplateColumns = '108px 1fr';
+headerContainer.style.columnGap = '62px';
+headerContainer.style.justifyContent = 'space-between';
+headerContainer.style.padding = '0 0 0 0';
+headerContainer.textContent = 'yowza';
 // remove above text later
-headerContainer.appendChild(header);
+header.appendChild(headerContainer);
 // come back and check per HTML how to add 
 // appendChild properties per each CSS section
 
@@ -55,6 +55,7 @@ headerMainLinksContainer.id = 'header-main-links-container';
 headerMainLinksContainer.style.display = 'flex';
 headerMainLinksContainer.style.flexDirection = 'column';
 headerMainLinksContainer.style.justifyContent = 'space-between';
+headerContainer.appendChild(headerMainLinksContainer);
 
 const topHeaderLinksContainer = document.createElement('div');
 topHeaderLinksContainer.id = 'top-header-links-container';
@@ -62,16 +63,19 @@ topHeaderLinksContainer.style.display = 'flex';
 topHeaderLinksContainer.style.justifyContent = 'space-between';
 topHeaderLinksContainer.style.fontSize = '14px';
 topHeaderLinksContainer.style.padding = '0 40px 0 0';
+headerMainLinksContainer.appendChild(topHeaderLinksContainer);
 
 const topLeftHeaderLinksContainer = document.createElement('div');
 topLeftHeaderLinksContainer.id = 'top-left-header-links-container';
 topLeftHeaderLinksContainer.style.display = 'flex';
 topLeftHeaderLinksContainer.style.alignItems = 'center';
+topHeaderLinksContainer.appendChild(topLeftHeaderLinksContainer);
 
 const topRightHeaderLinksContainer = document.createElement('div');
 topRightHeaderLinksContainer.id = 'top-right-header-links-container';
 topRightHeaderLinksContainer.style.display = 'flex';
 topRightHeaderLinksContainer.style.alignItems = 'center';
+topHeaderLinksContainer.appendChild(topRightHeaderLinksContainer);
 
 const hamburgerMenu = document.createElement('div');
 hamburgerMenu.id = 'hamburger-menu';
@@ -256,6 +260,7 @@ const bottomHeaderLinksContainer = document.createElement('div');
 bottomHeaderLinksContainer.id = 'bottom-header-links-container';
 bottomHeaderLinksContainer.style.display = 'flex';
 bottomHeaderLinksContainer.style.paddingBottom = '15px';
+headerMainLinksContainer.appendChild(bottomHeaderLinksContainer);
 
 const bottomHeaderLinksContainerUl = document.createElement('ul');
 bottomHeaderLinksContainerUl.id = 'bottom-header-links-container-ul';
@@ -271,19 +276,187 @@ const headerLogoContainer = document.createElement('div');
 headerLogoContainer.id = 'header-logo-container';
 headerLogoContainer.style.display = 'flex';
 headerLogoContainer.style.alignItems = 'center';
+headerContainer.appendChild(headerLogoContainer);
 
 // MAIN CONTAINER AND MAIN CONTENT CONTAINER
 
-const mainContainer = document.createElement('div');
-mainContainer.id = 'main-container';
-mainContainer.style.display = 'flex';
-mainContainer.style.alignItems = 'center';
-mainContainer.style.justifyContent = 'center';
-document.body.appendChild(mainContainer);
+const mainFlexboxContainer = document.createElement('div');
+mainFlexboxContainer.id = 'main-flexbox-container';
+mainFlexboxContainer.style.display = 'flex';
+mainFlexboxContainer.style.justifyContent = 'center';
+document.body.appendChild(mainFlexboxContainer);
 
-const mainContentContainer = document.createElement('div');
+const mainContentContainer = document.createElement('main');
 mainContentContainer.id = 'main-content-container';
-mainContentContainer.style.maxWidth = '1200px';
-mainContentContainer.style.backgroundColor = 'red';
-mainContentContainer.textContent = 'red';
-mainContainer.appendChild(mainContentContainer);
+mainContentContainer.style.padding = '63px 12px 0 12px';
+mainContentContainer.style.maxWidth = '1170px';
+mainFlexboxContainer.appendChild(mainContentContainer);
+
+const h1 = document.createElement('div');
+h1.id = 'h1';
+h1.style.fontSize = '54px';
+h1.textContent = 'Meet Our Food Experts';
+h1.style.fontWeight = '700';
+h1.style.marginBottom = '44px';
+h1.textAlign = 'center';
+mainContentContainer.appendChild(h1);
+
+const mainPhoto = document.createElement('div');
+h1.id = 'main-photo';
+h1.style.display = 'flex';
+h1.style.alignItems = 'center';
+h1.style.justifyContent = 'center';
+mainContentContainer.appendChild(mainPhoto);
+// check above, it's the div containing the image right?
+// then make a new element to add the image, or inside div..
+
+const foodExpertsMainImage = document.createElement('div');
+foodExpertsMainImage.id = 'food-experts-main-image';
+foodExpertsMainImage.style.width = '100%';
+
+const expertsInfoText = document.createElement('div');
+expertsInfoText.id = 'experts-info-text';
+expertsInfoText.style.fontSize = '20px';
+expertsInfoText.style.lineHeight = '22px';
+expertsInfoText.style.marginTop = '116px';
+expertsInfoText.style.marginBottom = '135px';
+expertsInfoText.textContent = `Our food experts are more than 
+just pros at their craft. They are people who care about 
+the food you eat and bring innovation into our kitchens.`;
+mainContentContainer.appendChild(expertsInfoText);
+
+const tripleGridContainer = document.createElement('section');
+tripleGridContainer.id = 'triple-grid-container';
+tripleGridContainer.style.display = 'grid';
+tripleGridContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
+tripleGridContainer.style.columnGap = '23px';
+mainContentContainer.appendChild(tripleGridContainer);
+
+const gridImage = document.createElement('div');
+gridImage.id = 'grid-image';
+gridImage.style.width = '100%';
+
+const gridTitle = document.createElement('div');
+gridTitle.id = 'grid-title';
+gridTitle.style.fontSize = '36px';
+gridTitle.style.fontWeight = '700';
+gridTitle.style.padding = '45px 0 18px 0';
+// add id to and add div inside of triple grid container for each
+
+const gridDescription = document.createElement('div');
+gridDescription.id = 'grid-description';
+gridDescription.style.padding = '18px 0 0 0';
+gridDescription.style.lineHeight = '24px';
+
+const gridButtons = document.createElement('button');
+gridButtons.id = 'grid-buttons';
+gridButtons.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons.style.border = 'none';
+gridButtons.style.borderRadius = '4px';
+gridButtons.style.marginTop = '35px';
+gridButtons.style.padding = '13px 25px';
+gridButtons.style.fontSize = '16px';
+gridButtons.style.lineHeight = '24px';
+// id is attributed to a single element
+// here have to split each button
+
+const gridButtonsMedia = document.createElement('div');
+gridButtonsMedia.id = 'grid-buttons-media';
+gridButtonsMedia.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtonsMedia.style.border = 'none';
+gridButtonsMedia.style.borderRadius = '4px';
+gridButtonsMedia.style.margin = '24px 14px 86px 14px';
+gridButtonsMedia.style.padding = '13px 25px';
+// gridButtonsMedia.style.fontSize = '16px';
+gridButtonsMedia.style.lineHeight = '24px';
+gridButtonsMedia.style.fontSize = '14px';
+
+const buttonsTripleGrid = document.createElement('div');
+buttonsTripleGrid.id = 'buttons-triple-grid';
+buttonsTripleGrid.style.display = 'grid';
+buttonsTripleGrid.style.gridTemplateColumns = '1fr 1fr 1fr';
+buttonsTripleGrid.style.columnGap = '23px';
+buttonsTripleGrid.style.marginBottom = '158px';
+mainContentContainer.appendChild(buttonsTripleGrid);
+
+const unorderedListFlexbox = document.createElement('section');
+unorderedListFlexbox.id = 'unordered-list-flexbox';
+unorderedListFlexbox.style.display = 'flex';
+unorderedListFlexbox.style.justifyContent = 'space-between';
+unorderedListFlexbox.style.padding = '0 20px';
+mainContentContainer.appendChild(unorderedListFlexbox);
+// add id to and add div inside of triple grid container for each
+
+const listHeader = document.createElement('div');
+listHeader.id = 'list-header';
+listHeader.style.fontWeight = '700';
+listHeader.style.marginBottom = '18px';
+
+const plusSign = document.createElement('div');
+plusSign.id = 'plus-sign';
+plusSign.style.width = '16px';
+plusSign.style.height = '16px';
+
+const unorderedListFlexboxUl = document.createElement('div');
+unorderedListFlexboxUl.id = 'unordered-list-flexbox-ul';
+unorderedListFlexboxUl.style.padding = '0';
+
+const unorderedListFlexboxLi = document.createElement('div');
+unorderedListFlexboxLi.id = 'unordered-list-flexbox-li';
+unorderedListFlexboxLi.style.listStyleType = 'none';
+unorderedListFlexboxLi.style.width = '180px';
+unorderedListFlexboxLi.style.marginBottom = '6px';
+
+const iconsFlexbox = document.createElement('section');
+iconsFlexbox.id = 'icons-flexbox';
+iconsFlexbox.style.display = 'flex';
+iconsFlexbox.style.justifyContent = 'space-between';
+iconsFlexbox.style.margin = '32px 0 42px 0';
+iconsFlexbox.style.padding = '0 20px';
+mainContentContainer.appendChild(iconsFlexbox);
+
+const socialMediaIcons = document.createElement('div');
+socialMediaIcons.id = 'social-media-icons';
+socialMediaIcons.style.marginRight = '17px';
+
+const footer = document.createElement('footer');
+footer.id = 'footer';
+footer.style.borderTop = '1px solid rgb(206,206,206)';
+footer.style.display = 'flex';
+footer.style.justifyContent = 'space-between';
+footer.style.alignItems = 'start';
+footer.style.padding = '48px 20px 104px 20px';
+mainContentContainer.appendChild(footer);
+
+const footerUl = document.createElement('ul');
+footerUl.id = 'footer-ul';
+footerUl.style.padding = '0';
+footerUl.style.display = 'inline';
+
+const footerLi = document.createElement('li');
+footerUl.id = 'footer-li';
+footerUl.style.display = 'inline-block';
+footerUl.style.listStyleType = 'none';
+footerUl.style.padding = '0 40px 0 0';
+footerUl.style.height = '44px';
+
+const nestedFlexbox = document.createElement('div');
+nestedFlexbox.id = 'nested-flexbox';
+nestedFlexbox.style.display = 'flex';
+nestedFlexbox.style.justifyContent = 'space-between';
+nestedFlexbox.style.alignItems = 'center';
+
+const archesLogo = document.createElement('div');
+archesLogo.id = 'arches-logo';
+archesLogo.style.width = '28px';
+archesLogo.style.verticalAlign = 'bottom';
+
+const copyrightText = document.createElement('div');
+copyrightText.id = 'copyright-text';
+copyrightText.style.lineHeight = '16px';
+copyrightText.style.textAlign = 'right';
+copyrightText.style.padding = '12px 0 0 44px';
+copyrightText.style.width = '280px';
+
+// NO MEDIA QUERIES DONE AS THESE ARE DONE ENTIRELY IN
+// CSS AS PER CHAT GPT
