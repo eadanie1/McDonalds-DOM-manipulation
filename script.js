@@ -10,13 +10,6 @@ document.body.style.fontSize = '16px';
 document.body.style.color = 'rgb(41,41,41)';
 document.body.style.lineHeight = '22px';
 
-// GENERAL: ANCHOR ELEMENTS
-
-const allLinks = document.querySelectorAll('a');
-allLinks.forEach(link => {
-    link.style.color = 'rgb(41,41,41)',
-    link.style.textDecoration = 'none';
-});
 
 // GENERAL: BUTTONS
 
@@ -77,10 +70,10 @@ topRightHeaderLinksContainer.style.display = 'flex';
 topRightHeaderLinksContainer.style.alignItems = 'center';
 topHeaderLinksContainer.appendChild(topRightHeaderLinksContainer);
 
-const hamburgerMenu = document.createElement('div');
-hamburgerMenu.id = 'hamburger-menu';
-hamburgerMenu.style.width = '22px';
-hamburgerMenu.style.marginLeft = '10px';
+// const hamburgerMenu = document.createElement('div');
+// hamburgerMenu.id = 'hamburger-menu';
+// hamburgerMenu.style.width = '22px';
+// hamburgerMenu.style.marginLeft = '10px';
 
 const headerTopLinks = document.createElement('div');
 headerTopLinks.id = 'header-top-links';
@@ -307,12 +300,13 @@ h1.style.display = 'flex';
 h1.style.alignItems = 'center';
 h1.style.justifyContent = 'center';
 mainContentContainer.appendChild(mainPhoto);
-// check above, it's the div containing the image right?
-// then make a new element to add the image, or inside div..
 
-const foodExpertsMainImage = document.createElement('div');
+const foodExpertsMainImage = document.createElement('img');
 foodExpertsMainImage.id = 'food-experts-main-image';
+foodExpertsMainImage.src = 'images/FoodExperts_Hero_1260x560_Desktop_hero-desktop.jpeg';
+foodExpertsMainImage.alt = 'food-experts-main-image';
 foodExpertsMainImage.style.width = '100%';
+mainPhoto.appendChild(foodExpertsMainImage);
 
 const expertsInfoText = document.createElement('div');
 expertsInfoText.id = 'experts-info-text';
@@ -325,6 +319,8 @@ just pros at their craft. They are people who care about
 the food you eat and bring innovation into our kitchens.`;
 mainContentContainer.appendChild(expertsInfoText);
 
+// TRIPLE GRID CONTAINER
+
 const tripleGridContainer = document.createElement('section');
 tripleGridContainer.id = 'triple-grid-container';
 tripleGridContainer.style.display = 'grid';
@@ -332,44 +328,32 @@ tripleGridContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
 tripleGridContainer.style.columnGap = '23px';
 mainContentContainer.appendChild(tripleGridContainer);
 
-const gridImage = document.createElement('div');
-gridImage.id = 'grid-image';
-gridImage.style.width = '100%';
+const tripleGridSubDiv1 = document.createElement('div');
+tripleGridSubDiv1.id = 'triple-grid-sub-div1';
+tripleGridContainer.appendChild(tripleGridSubDiv1);
 
-const gridTitle = document.createElement('div');
-gridTitle.id = 'grid-title';
-gridTitle.style.fontSize = '36px';
-gridTitle.style.fontWeight = '700';
-gridTitle.style.padding = '45px 0 18px 0';
-// add id to and add div inside of triple grid container for each
+const gridImage1 = document.createElement('img');
+gridImage1.id = 'grid-image';
+gridImage1.src = 'images/Our_Chefs_3col_760x508_3-column-desktop.jpeg';
+gridImage1.alt = 'food-experts-main-image';
+gridImage1.style.width = '100%';
+tripleGridSubDiv1.appendChild(gridImage1);
 
-const gridDescription = document.createElement('div');
-gridDescription.id = 'grid-description';
-gridDescription.style.padding = '18px 0 0 0';
-gridDescription.style.lineHeight = '24px';
+const gridTitle1 = document.createElement('div');
+gridTitle1.id = 'grid-title';
+gridTitle1.textContent = 'Our Chefs';
+gridTitle1.style.fontSize = '36px';
+gridTitle1.style.fontWeight = '700';
+gridTitle1.style.padding = '45px 0 18px 0';
+tripleGridSubDiv1.appendChild(gridTitle1);
 
-const gridButtons = document.createElement('button');
-gridButtons.id = 'grid-buttons';
-gridButtons.style.backgroundColor = 'rgb(255, 188, 13)';
-gridButtons.style.border = 'none';
-gridButtons.style.borderRadius = '4px';
-gridButtons.style.marginTop = '35px';
-gridButtons.style.padding = '13px 25px';
-gridButtons.style.fontSize = '16px';
-gridButtons.style.lineHeight = '24px';
-// id is attributed to a single element
-// here have to split each button
-
-const gridButtonsMedia = document.createElement('div');
-gridButtonsMedia.id = 'grid-buttons-media';
-gridButtonsMedia.style.backgroundColor = 'rgb(255, 188, 13)';
-gridButtonsMedia.style.border = 'none';
-gridButtonsMedia.style.borderRadius = '4px';
-gridButtonsMedia.style.margin = '24px 14px 86px 14px';
-gridButtonsMedia.style.padding = '13px 25px';
-// gridButtonsMedia.style.fontSize = '16px';
-gridButtonsMedia.style.lineHeight = '24px';
-gridButtonsMedia.style.fontSize = '14px';
+const gridDescription1 = document.createElement('div');
+gridDescription1.id = 'grid-description';
+gridDescription1.textContent = `Everyday, culinary masters 
+are cooking up new tastes in our kitchens.`;
+gridDescription1.style.padding = '18px 0 0 0';
+gridDescription1.style.lineHeight = '24px';
+tripleGridSubDiv1.appendChild(gridDescription1);
 
 const buttonsTripleGrid = document.createElement('div');
 buttonsTripleGrid.id = 'buttons-triple-grid';
@@ -378,6 +362,130 @@ buttonsTripleGrid.style.gridTemplateColumns = '1fr 1fr 1fr';
 buttonsTripleGrid.style.columnGap = '23px';
 buttonsTripleGrid.style.marginBottom = '158px';
 mainContentContainer.appendChild(buttonsTripleGrid);
+
+const buttonsTripleGridSubDiv1 = document.createElement('div');
+buttonsTripleGridSubDiv1.id = 'buttons-triple-grid-sub-div';
+buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv1);
+
+const gridButtons1Link = document.createElement('a');
+gridButtons1Link.id = 'grid-buttons1-link';
+gridButtons1Link.href = `https://www.mcdonalds.com/us/en-us/about-our-
+food/meet-our-food-experts/our-chefs.html`;
+buttonsTripleGridSubDiv1.appendChild(gridButtons1Link);
+
+const gridButtons1 = document.createElement('button');
+gridButtons1.id = 'grid-buttons1';
+gridButtons1.textContent = 'Meet Our Chefs';
+gridButtons1.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons1.style.border = 'none';
+gridButtons1.style.borderRadius = '4px';
+gridButtons1.style.marginTop = '35px';
+gridButtons1.style.padding = '13px 25px';
+gridButtons1.style.fontSize = '16px';
+gridButtons1.style.lineHeight = '24px';
+gridButtons1.style.cursor = 'pointer';
+gridButtons1Link.appendChild(gridButtons1);
+
+const tripleGridSubDiv2 = document.createElement('div');
+tripleGridSubDiv2.id = 'triple-grid-sub-div2';
+tripleGridContainer.appendChild(tripleGridSubDiv2);
+
+const gridImage2 = document.createElement('img');
+gridImage2.id = 'grid-image2';
+gridImage2.src = 'images/Cynthia_G_3Col_376x252_Desktop_3-column-desktop.jpeg';
+// gridImage2.alt = 'food-experts-main-image';
+gridImage2.style.width = '100%';
+tripleGridSubDiv2.appendChild(gridImage2);
+
+const gridTitle2 = document.createElement('div');
+gridTitle2.id = 'grid-title2';
+gridTitle2.textContent = 'Our Dietitians';
+gridTitle2.style.fontSize = '36px';
+gridTitle2.style.fontWeight = '700';
+gridTitle2.style.padding = '45px 0 18px 0';
+tripleGridSubDiv2.appendChild(gridTitle2);
+
+const gridDescription2 = document.createElement('div');
+gridDescription2.id = 'grid-description2';
+gridDescription2.textContent = `Get to know our Registered 
+Dietitian Nutritionists who add a different type of value 
+to your meal.`;
+gridDescription2.style.padding = '18px 0 0 0';
+gridDescription2.style.lineHeight = '24px';
+tripleGridSubDiv2.appendChild(gridDescription2);
+
+const buttonsTripleGridSubDiv2 = document.createElement('div');
+buttonsTripleGridSubDiv2.id = 'buttons-triple-grid-sub-div2';
+buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv2);
+
+const gridButtons2Link = document.createElement('a');
+gridButtons2Link.id = 'grid-buttons2-link';
+gridButtons2Link.href = `https://www.mcdonalds.com/us/en-us/about-
+our-food/meet-our-food-experts/our-nutritionists.html`;
+buttonsTripleGridSubDiv2.appendChild(gridButtons2Link);
+
+const gridButtons2 = document.createElement('button');
+gridButtons2.id = 'grid-buttons2';
+gridButtons2.textContent = 'Meet Our Dietitians';
+gridButtons2.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons2.style.border = 'none';
+gridButtons2.style.borderRadius = '4px';
+gridButtons2.style.marginTop = '35px';
+gridButtons2.style.padding = '13px 25px';
+gridButtons2.style.fontSize = '16px';
+gridButtons2.style.lineHeight = '24px';
+gridButtons2.style.cursor = 'pointer';
+gridButtons2Link.appendChild(gridButtons2);
+
+const tripleGridSubDiv3 = document.createElement('div');
+tripleGridSubDiv3.id = 'triple-grid-sub-div3';
+tripleGridContainer.appendChild(tripleGridSubDiv3);
+
+const gridImage3 = document.createElement('img');
+gridImage3.id = 'grid-image3';
+gridImage3.src = 'images/Suppliers_3Col_3-column-desktop.jpeg';
+// gridImage3.alt = 'food-experts-main-image';
+gridImage3.style.width = '100%';
+tripleGridSubDiv3.appendChild(gridImage3);
+
+const gridTitle3 = document.createElement('div');
+gridTitle3.id = 'grid-title3';
+gridTitle3.textContent = 'Supplier Stories';
+gridTitle3.style.fontSize = '36px';
+gridTitle3.style.fontWeight = '700';
+gridTitle3.style.padding = '45px 0 18px 0';
+tripleGridSubDiv3.appendChild(gridTitle3);
+
+const gridDescription3 = document.createElement('div');
+gridDescription3.id = 'grid-description3';
+gridDescription3.textContent = `Meet some of the people 
+who provide the ingredients for your favorite menu items.`;
+gridDescription3.style.padding = '18px 0 0 0';
+gridDescription3.style.lineHeight = '24px';
+tripleGridSubDiv3.appendChild(gridDescription3);
+
+const buttonsTripleGridSubDiv3 = document.createElement('div');
+buttonsTripleGridSubDiv3.id = 'buttons-triple-grid-sub-div3';
+buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv3);
+
+const gridButtons3Link = document.createElement('a');
+gridButtons3Link.id = 'grid-buttons3-link';
+gridButtons3Link.href = `https://www.mcdonalds.com/us/en-us/about-
+our-food/meet-our-suppliers.html`;
+buttonsTripleGridSubDiv3.appendChild(gridButtons3Link);
+
+const gridButtons3 = document.createElement('button');
+gridButtons3.id = 'grid-buttons3';
+gridButtons3.textContent = 'See Supplier Stories';
+gridButtons3.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons3.style.border = 'none';
+gridButtons3.style.borderRadius = '4px';
+gridButtons3.style.marginTop = '35px';
+gridButtons3.style.padding = '13px 25px';
+gridButtons3.style.fontSize = '16px';
+gridButtons3.style.lineHeight = '24px';
+gridButtons3.style.cursor = 'pointer';
+gridButtons3Link.appendChild(gridButtons3);
 
 const unorderedListFlexbox = document.createElement('section');
 unorderedListFlexbox.id = 'unordered-list-flexbox';
@@ -391,11 +499,6 @@ const listHeader = document.createElement('div');
 listHeader.id = 'list-header';
 listHeader.style.fontWeight = '700';
 listHeader.style.marginBottom = '18px';
-
-const plusSign = document.createElement('div');
-plusSign.id = 'plus-sign';
-plusSign.style.width = '16px';
-plusSign.style.height = '16px';
 
 const unorderedListFlexboxUl = document.createElement('div');
 unorderedListFlexboxUl.id = 'unordered-list-flexbox-ul';
