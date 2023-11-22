@@ -455,6 +455,7 @@ h1.id = 'h1';
 h1.style.fontSize = '54px';
 h1.textContent = 'Meet Our Food Experts';
 h1.style.fontWeight = '700';
+h1.style.marginTop = '44px';
 h1.style.marginBottom = '44px';
 h1.textAlign = 'center';
 mainContentContainer.appendChild(h1);
@@ -1357,9 +1358,113 @@ iconsFlexbox.style.margin = '32px 0 42px 0';
 iconsFlexbox.style.padding = '0 20px';
 mainContentContainer.appendChild(iconsFlexbox);
 
-const socialMediaIcons = document.createElement('div');
-socialMediaIcons.id = 'social-media-icons';
-socialMediaIcons.style.marginRight = '17px';
+const iconsFlexboxSubDiv1 = document.createElement('div');
+iconsFlexboxSubDiv1.id = 'icons-flexbox-sub-div1';
+iconsFlexbox.appendChild(iconsFlexboxSubDiv1);
+
+const socialMediaIcons1Link = document.createElement('a');
+socialMediaIcons1Link.id = 'social-media-icons1-link';
+socialMediaIcons1Link.href = 'https://www.facebook.com/McDonalds/';
+socialMediaIcons1Link.style.marginRight = '17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons1Link);
+
+const socialMediaIcons1 = document.createElement('img');
+socialMediaIcons1.id = 'social-media-icons1';
+socialMediaIcons1.src = 'icons/facebook.png';
+socialMediaIcons1.style.marginRight = '17px';
+socialMediaIcons1Link.appendChild(socialMediaIcons1);
+
+const socialMediaIcons2Link = document.createElement('a');
+socialMediaIcons2Link.id = 'social-media-icons2-link';
+socialMediaIcons2Link.href = 'https://www.x.com/McDonalds';
+socialMediaIcons2Link.style.marginRight = '17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons2Link);
+
+const socialMediaIcons2 = document.createElement('img');
+socialMediaIcons2.id = 'social-media-icons2';
+socialMediaIcons2.src = 'icons/x.png';
+socialMediaIcons2.style.marginRight = '17px';
+socialMediaIcons2.style.marginLeft = '-17px';
+socialMediaIcons2Link.appendChild(socialMediaIcons2);
+
+const socialMediaIcons3Link = document.createElement('a');
+socialMediaIcons3Link.id = 'social-media-icons3-link';
+socialMediaIcons3Link.href = `https://www.youtube.com/channel/
+UCRI5ZedBs0_BYY4PlxD6m7w`;
+socialMediaIcons3Link.style.marginRight = '17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons3Link);
+
+const socialMediaIcons3 = document.createElement('img');
+socialMediaIcons3.id = 'social-media-icons3';
+socialMediaIcons3.src = 'icons/youtube.png';
+socialMediaIcons3.style.marginRight = '17px';
+socialMediaIcons3.style.marginLeft = '-17px';
+socialMediaIcons3Link.appendChild(socialMediaIcons3);
+
+const socialMediaIcons4Link = document.createElement('a');
+socialMediaIcons4Link.id = 'social-media-icons4-link';
+socialMediaIcons4Link.href = `https://www.instagram.com/mcdonalds/`;
+socialMediaIcons4Link.style.marginRight = '17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons4Link);
+
+const socialMediaIcons4 = document.createElement('img');
+socialMediaIcons4.id = 'social-media-icons4';
+socialMediaIcons4.src = 'icons/instagram.png';
+socialMediaIcons4.style.marginRight = '17px';
+socialMediaIcons4.style.marginLeft = '-17px';
+socialMediaIcons4Link.appendChild(socialMediaIcons4);
+
+const socialMediaIcons5Link = document.createElement('a');
+socialMediaIcons5Link.id = 'social-media-icons5-link';
+socialMediaIcons5Link.href = `https://mcdonalds.tumblr.com/`;
+socialMediaIcons5Link.style.marginRight = '17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons5Link);
+
+const socialMediaIcons5 = document.createElement('img');
+socialMediaIcons5.id = 'social-media-icons5';
+socialMediaIcons5.src = 'icons/tumblr.png';
+socialMediaIcons5.style.marginRight = '17px';
+socialMediaIcons5.style.marginLeft = '-17px';
+socialMediaIcons5Link.appendChild(socialMediaIcons5);
+
+const socialMediaIcons6Link = document.createElement('a');
+socialMediaIcons6Link.id = 'social-media-icons6-link';
+socialMediaIcons6Link.href = `https://open.spotify.com/user/mcdonalds`;
+socialMediaIcons6Link.style.marginLeft = '-17px';
+iconsFlexboxSubDiv1.appendChild(socialMediaIcons6Link);
+
+const socialMediaIcons6 = document.createElement('img');
+socialMediaIcons6.id = 'social-media-icons6';
+socialMediaIcons6.src = 'icons/spotify.png';
+socialMediaIcons6Link.appendChild(socialMediaIcons6);
+
+const iconsFlexboxSubDiv2 = document.createElement('div');
+iconsFlexboxSubDiv2.id = 'icons-flexbox-sub-div2';
+iconsFlexbox.appendChild(iconsFlexboxSubDiv2);
+
+const socialMediaIcons21Link = document.createElement('a');
+socialMediaIcons21Link.id = 'social-media-icons21-link';
+socialMediaIcons21Link.href = `https://itunes.apple.com/us/
+app/mcdonalds-mobile/id922103212?mt=8`;
+socialMediaIcons21Link.style.marginRight = '13px';
+iconsFlexboxSubDiv2.appendChild(socialMediaIcons21Link);
+
+const socialMediaIcons21 = document.createElement('img');
+socialMediaIcons21.id = 'social-media-icons21';
+socialMediaIcons21.src = 'icons/app_store_badge (1).png';
+socialMediaIcons21Link.appendChild(socialMediaIcons21);
+
+const socialMediaIcons22Link = document.createElement('a');
+socialMediaIcons22Link.id = 'social-media-icons22-link';
+socialMediaIcons22Link.href = `https://play.google.com/store/
+apps/details?id=com.mcdonalds.app&hl=en`;
+socialMediaIcons22Link.style.marginRight = '17px';
+iconsFlexboxSubDiv2.appendChild(socialMediaIcons22Link);
+
+const socialMediaIcons22 = document.createElement('img');
+socialMediaIcons22.id = 'social-media-icons22';
+socialMediaIcons22.src = 'icons/google_play_badge.png';
+socialMediaIcons22Link.appendChild(socialMediaIcons22);
 
 const footer = document.createElement('footer');
 footer.id = 'footer';
@@ -1370,35 +1475,143 @@ footer.style.alignItems = 'start';
 footer.style.padding = '48px 20px 104px 20px';
 mainContentContainer.appendChild(footer);
 
+const footerSubDiv = document.createElement('div');
+footer.id = 'footer-sub-div';
+footer.appendChild(footerSubDiv);
+
 const footerUl = document.createElement('ul');
 footerUl.id = 'footer-ul';
 footerUl.style.padding = '0';
 footerUl.style.display = 'inline';
+footerSubDiv.appendChild(footerUl);
 
-const footerLi = document.createElement('li');
-footerUl.id = 'footer-li';
-footerUl.style.display = 'inline-block';
-footerUl.style.listStyleType = 'none';
-footerUl.style.padding = '0 40px 0 0';
-footerUl.style.height = '44px';
+const footerLi1Link = document.createElement('a');
+footerLi1Link.id = 'footer-li1-link';
+footerLi1Link.href = `https://www.mcdonalds.com/us/
+en-us/privacy-overview.html`;
+footerUl.appendChild(footerLi1Link);
+
+const footerLi1 = document.createElement('li');
+footerLi1.id = 'footer-li1';
+footerLi1.textContent = 'Privacy (Updated)';
+footerLi1.style.color = 'rgb(41,41,41)';
+footerLi1.style.display = 'inline-block';
+footerLi1.style.listStyleType = 'none';
+footerLi1.style.padding = '0 40px 0 0';
+footerLi1.style.height = '44px';
+footerLi1Link.appendChild(footerLi1);
+
+const footerLi2Link = document.createElement('a');
+footerLi2Link.id = 'footer-li2-link';
+footerLi2Link.href = `https://www.mcdonalds.com/
+us/en-us/california-privacy-notice.html`;
+footerUl.appendChild(footerLi2Link);
+
+const footerLi2 = document.createElement('li');
+footerLi2.id = 'footer-li2';
+footerLi2.textContent = 'California Privacy Notice';
+footerLi2.style.color = 'rgb(41,41,41)';
+footerLi2.style.display = 'inline-block';
+footerLi2.style.listStyleType = 'none';
+footerLi2.style.padding = '0 40px 0 0';
+footerLi2.style.height = '44px';
+footerLi2Link.appendChild(footerLi2);
+
+const footerLi3Link = document.createElement('a');
+footerLi3Link.id = 'footer-li3-link';
+footerLi3Link.href = `https://www.mcdonalds.com/
+us/en-us/terms-and-conditions.html`;
+footerUl.appendChild(footerLi3Link);
+
+const footerLi3 = document.createElement('li');
+footerLi3.id = 'footer-li3';
+footerLi3.textContent = 'Terms & Conditions';
+footerLi3.style.color = 'rgb(41,41,41)';
+footerLi3.style.display = 'inline-block';
+footerLi3.style.listStyleType = 'none';
+footerLi3.style.padding = '0 40px 0 0';
+footerLi3.style.height = '44px';
+footerLi3Link.appendChild(footerLi3);
+
+const footerLi4Link = document.createElement('a');
+footerLi4Link.id = 'footer-li4-link';
+footerLi4Link.href = `https://www.mcdonalds.com/
+us/en-us/accessibility.html`;
+footerUl.appendChild(footerLi4Link);
+
+const footerLi4 = document.createElement('li');
+footerLi4.id = 'footer-li4';
+footerLi4.textContent = 'Accessibility';
+footerLi4.style.color = 'rgb(41,41,41)';
+footerLi4.style.display = 'inline-block';
+footerLi4.style.listStyleType = 'none';
+footerLi4.style.padding = '0 40px 0 0';
+footerLi4.style.height = '44px';
+footerLi4Link.appendChild(footerLi4);
+
+const footerLi5Link = document.createElement('a');
+footerLi5Link.id = 'footer-li5-link';
+footerLi5Link.href = `https://www.mcdonalds.com/us/
+en-us/privacy/do-not-sell-my-personal-information.html`;
+footerUl.appendChild(footerLi5Link);
+
+const footerLi5 = document.createElement('li');
+footerLi5.id = 'footer-li5';
+footerLi5.textContent = `Do Not Sell or Share My 
+Personal Information`;
+footerLi5.style.color = 'rgb(41,41,41)';
+footerLi5.style.display = 'inline-block';
+footerLi5.style.listStyleType = 'none';
+footerLi5.style.padding = '0 40px 0 0';
+footerLi5.style.height = '44px';
+footerLi5Link.appendChild(footerLi5);
+
+const footerLi6Link = document.createElement('a');
+footerLi6Link.id = 'footer-li6-link';
+footerLi6Link.href = `https://www.mcdonalds.com/us/
+en-us/about-our-food/meet-our-food-experts.html#`;
+footerUl.appendChild(footerLi6Link);
+
+const footerLi6 = document.createElement('li');
+footerLi6.id = 'footer-li6';
+footerLi6.textContent = `Cookies Settings`;
+footerLi6.style.color = 'rgb(41,41,41)';
+footerLi6.style.display = 'inline-block';
+footerLi6.style.listStyleType = 'none';
+footerLi6.style.padding = '0 40px 0 0';
+footerLi6.style.height = '44px';
+footerLi6Link.appendChild(footerLi6);
 
 const nestedFlexbox = document.createElement('div');
 nestedFlexbox.id = 'nested-flexbox';
 nestedFlexbox.style.display = 'flex';
 nestedFlexbox.style.justifyContent = 'space-between';
 nestedFlexbox.style.alignItems = 'center';
+footer.appendChild(nestedFlexbox);
 
-const archesLogo = document.createElement('div');
+const nestedFlexboxSubDiv1 = document.createElement('div');
+nestedFlexboxSubDiv1.id = 'nested-flexbox-sub-div';
+nestedFlexbox.appendChild(nestedFlexboxSubDiv1);
+
+const archesLogo = document.createElement('img');
 archesLogo.id = 'arches-logo';
+archesLogo.src = 'icons/arches-logo_108x108.jpg';
 archesLogo.style.width = '28px';
 archesLogo.style.verticalAlign = 'bottom';
+nestedFlexboxSubDiv1.appendChild(archesLogo);
+
+const nestedFlexboxSubDiv2 = document.createElement('div');
+nestedFlexboxSubDiv2.id = 'nested-flexbox-sub-div';
+nestedFlexbox.appendChild(nestedFlexboxSubDiv2);
 
 const copyrightText = document.createElement('div');
 copyrightText.id = 'copyright-text';
+copyrightText.textContent = '© 2017 - 2023 McDonald\'s. All Rights Reserved';
 copyrightText.style.lineHeight = '16px';
 copyrightText.style.textAlign = 'right';
 copyrightText.style.padding = '12px 0 0 44px';
 copyrightText.style.width = '280px';
+nestedFlexboxSubDiv2.appendChild(copyrightText);
 
 // NO MEDIA QUERIES DONE AS THESE ARE DONE ENTIRELY IN
 // CSS AS PER CHAT GPT
