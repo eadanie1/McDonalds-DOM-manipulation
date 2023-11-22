@@ -1200,6 +1200,60 @@ unorderedListFlexboxLi37Black.style.width = '180px';
 unorderedListFlexboxLi37Black.style.marginBottom = '6px';
 unorderedListFlexboxLi37BlackLink.appendChild(unorderedListFlexboxLi37Black);
 
+const unorderedListFlexboxLi38LgLink = document.createElement('a');
+unorderedListFlexboxLi38LgLink.id = 'unordered-list-flexbox-li38-lg-link';
+unorderedListFlexboxLi38LgLink.href = `https://www.mcdonalds.com/us/en-us/
+community/lgbtq-plus.html`;
+unorderedListFlexboxLi38LgLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi38LgLink.style.textDecoration = 'none';
+unorderedListFlexboxLi38LgLink.style.listStyleType = 'none';
+unorderedListFlexboxLi38LgLink.style.width = '180px';
+unorderedListFlexboxLi38LgLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi38LgLink);
+
+const unorderedListFlexboxLi38Lg = document.createElement('li');
+unorderedListFlexboxLi38Lg.id = 'unordered-list-flexbox-li38-lg';
+unorderedListFlexboxLi38Lg.textContent = 'McDonald’s LGBTQ+';
+unorderedListFlexboxLi38Lg.style.listStyleType = 'none';
+unorderedListFlexboxLi38Lg.style.width = '180px';
+unorderedListFlexboxLi38Lg.style.marginBottom = '6px';
+unorderedListFlexboxLi38LgLink.appendChild(unorderedListFlexboxLi38Lg);
+
+const unorderedListFlexboxSubDiv4 = document.createElement('div');
+unorderedListFlexboxSubDiv4.id = 'unordered-list-flexbox-sub-div4';
+unorderedListFlexbox.appendChild(unorderedListFlexboxSubDiv4);
+
+const listHeader4 = document.createElement('div');
+listHeader4.id = 'list-header4';
+listHeader4.textContent = 'Contact Us';
+listHeader4.style.fontWeight = '700';
+listHeader4.style.marginBottom = '18px';
+unorderedListFlexboxSubDiv4.appendChild(listHeader4);
+
+const unorderedListFlexboxUl4 = document.createElement('ul');
+unorderedListFlexboxUl4.id = 'unordered-list-flexbox-ul4';
+unorderedListFlexboxUl4.style.padding = '0';
+unorderedListFlexboxSubDiv4.appendChild(unorderedListFlexboxUl4);
+
+const unorderedListFlexboxLi41ContactLink = document.createElement('a');
+unorderedListFlexboxLi41ContactLink.id = 'unordered-list-flexbox-li41-contact-link';
+unorderedListFlexboxLi41ContactLink.href = `https://www.mcdonalds.com/us/
+en-us/contact-us.html`;
+unorderedListFlexboxLi41ContactLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi41ContactLink.style.textDecoration = 'none';
+unorderedListFlexboxLi41ContactLink.style.listStyleType = 'none';
+unorderedListFlexboxLi41ContactLink.style.width = '180px';
+unorderedListFlexboxLi41ContactLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi41ContactLink);
+
+const unorderedListFlexboxLi41Contact = document.createElement('li');
+unorderedListFlexboxLi41Contact.id = 'unordered-list-flexbox-li41-contact';
+unorderedListFlexboxLi41Contact.textContent = 'Contact Us Overview';
+unorderedListFlexboxLi41Contact.style.listStyleType = 'none';
+unorderedListFlexboxLi41Contact.style.width = '180px';
+unorderedListFlexboxLi41Contact.style.marginBottom = '6px';
+unorderedListFlexboxLi41ContactLink.appendChild(unorderedListFlexboxLi41Contact);
+
 const iconsFlexbox = document.createElement('section');
 iconsFlexbox.id = 'icons-flexbox';
 iconsFlexbox.style.display = 'flex';
