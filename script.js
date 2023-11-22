@@ -99,6 +99,12 @@ headerTopLinksLanguageDownArrow.id = 'header-top-links-language-down-arrow';
 headerTopLinksLanguageDownArrow.src = 'icons/downarrow.png';
 headerTopLinksLanguageDownArrow.style.marginLeft = '5px';
 headerTopLinksLanguageDownArrow.style.width = '9px';
+headerTopLinksLanguageDownArrow.style.transition = 'transform 0.3s ease';
+// headerTopLinksLanguageDownArrow.classList.add('arrow-rotate');
+headerTopLinksLanguageDownArrow.addEventListener('click', function() {
+    event.preventDefault();
+    headerTopLinksLanguageDownArrow.classList.toggle('arrow-rotate')
+});
 headerTopLinksLanguage.appendChild(headerTopLinksLanguageDownArrow);
 
 const headerTopLinksEmail = document.createElement('a');
@@ -163,7 +169,6 @@ headerTopLinksLocation.style.justifyContent = 'center';
 headerTopLinksLocation.style.alignItems = 'center';
 headerTopLinksLocation.style.textDecoration = 'none';
 headerTopLinksLocation.style.color = 'rgb(0,107,174)';
-// headerTopLinksLocation.style.textDecoration = 'none';
 headerTopLinksLocation.style.textDecoration = 'underline';
 headerTopLinksLocation.style.margin = '0 30px 0 0';
 topRightHeaderLinksContainer.appendChild(headerTopLinksLocation);
@@ -196,6 +201,16 @@ topRightHeaderLinksContainer.appendChild(orderNowButton);
 
 // MODAL
 
+// const orderNowButtonActiveOverlay = document.createElement('div');
+// orderNowButtonActiveOverlay.id = 'order-now-button-active-overlay';
+// orderNowButtonActiveOverlay.style.backgroundColor = 'rgba(0,0,0,0.4)';
+// orderNowButtonActiveOverlay.style.zIndex = '50';
+
+// const orderNowButtonActiveModal = document.createElement('div');
+// orderNowButtonActiveModal.id = 'order-now-button-active-modal';
+// orderNowButtonActiveModal.style.opacity = '1';
+// orderNowButtonActiveModal.style.zIndex = '50';
+
 const overlay = document.createElement('div');
 overlay.id = 'overlay';
 overlay.style.position = 'fixed';
@@ -208,18 +223,7 @@ overlay.style.display = 'flex';
 overlay.style.alignItems = 'center';
 overlay.style.justifyContent = 'center';
 overlay.style.zIndex = '-1';
-
-// probably change below to onclick JS function
-const orderNowButtonActiveOverlay = document.createElement('div');
-orderNowButtonActiveOverlay.id = 'order-now-button-active-overlay';
-orderNowButtonActiveOverlay.style.backgroundColor = 'rgba(0,0,0,0.4)';
-orderNowButtonActiveOverlay.style.zIndex = '50';
-
-// probably change below to onclick JS function
-const orderNowButtonActiveModal = document.createElement('div');
-orderNowButtonActiveModal.id = 'order-now-button-active-modal';
-orderNowButtonActiveModal.style.opacity = '1';
-orderNowButtonActiveModal.style.zIndex = '50';
+orderNowButton.appendChild(overlay);
 
 const modal = document.createElement('div');
 modal.id = 'modal';
@@ -233,12 +237,23 @@ modal.style.flexDirection = 'column';
 modal.style.alignItems = 'center';
 modal.style.opacity = '0';
 modal.style.zIndex = '-1';
+overlay.appendChild(modal);
 
 const modalTitle = document.createElement('div');
 modalTitle.id = 'modal-title';
+modalTitle.textContent = 'Earn points on delivery or pickup via the app';
 modalTitle.style.fontSize = '24px';
 modalTitle.style.fontWeight = '700';
 modalTitle.style.margin = '48px 0 40px 0';
+modal.appendChild(modalTitle);
+
+const modalSubTitle = document.createElement('div');
+modalSubTitle.id = 'modal-sub-title';
+modalSubTitle.textContent = 'Or, please select your McDelivery option';
+modalSubTitle.style.fontSize = '24px';
+modalSubTitle.style.fontWeight = '700';
+modalSubTitle.style.margin = '48px 0 40px 0';
+modal.appendChild(modalSubTitle);
 
 const modalRadioGrid = document.createElement('div');
 modalRadioGrid.id = 'modal-radio-grid';
@@ -246,11 +261,13 @@ modalRadioGrid.style.display = 'flex';
 modalRadioGrid.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
 modalRadioGrid.style.columnGap = '50px';
 modalRadioGrid.style.alignItems = 'center';
+modal.appendChild(modalRadioGrid);
 
-const modalIcons = document.createElement('div');
-modalIcons.id = 'modal-icons';
-modalIcons.style.width = '120px';
-modalIcons.style.margin = '66px 0 36px 0';
+const modalIcons1 = document.createElement('div');
+modalIcons1.id = 'modal-icons1';
+modalIcons1.style.width = '120px';
+modalIcons1.style.margin = '66px 0 36px 0';
+modal.appendChild(modalIcons1);
 
 const radioTitle = document.createElement('div');
 radioTitle.id = 'radio-title';
