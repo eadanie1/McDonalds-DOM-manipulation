@@ -913,7 +913,7 @@ unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi23PlayLink);
 
 const unorderedListFlexboxLi23Play = document.createElement('li');
 unorderedListFlexboxLi23Play.id = 'unordered-list-flexbox-li23-play';
-unorderedListFlexboxLi23Play.textContent = 'Playplaces & Parties';
+unorderedListFlexboxLi23Play.textContent = 'PlayPlaces & Parties';
 unorderedListFlexboxLi23Play.style.listStyleType = 'none';
 unorderedListFlexboxLi23Play.style.width = '180px';
 unorderedListFlexboxLi23Play.style.marginBottom = '6px';
@@ -1175,7 +1175,7 @@ unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi36IntLink);
 
 const unorderedListFlexboxLi36Int = document.createElement('li');
 unorderedListFlexboxLi36Int.id = 'unordered-list-flexbox-li36-int';
-unorderedListFlexboxLi36Int.textContent = 'American McDonald\’s International';
+unorderedListFlexboxLi36Int.textContent = 'McDonald\’s International';
 unorderedListFlexboxLi36Int.style.listStyleType = 'none';
 unorderedListFlexboxLi36Int.style.width = '180px';
 unorderedListFlexboxLi36Int.style.marginBottom = '6px';
@@ -1253,6 +1253,101 @@ unorderedListFlexboxLi41Contact.style.listStyleType = 'none';
 unorderedListFlexboxLi41Contact.style.width = '180px';
 unorderedListFlexboxLi41Contact.style.marginBottom = '6px';
 unorderedListFlexboxLi41ContactLink.appendChild(unorderedListFlexboxLi41Contact);
+
+const unorderedListFlexboxLi42GiftLink = document.createElement('a');
+unorderedListFlexboxLi42GiftLink.id = 'unordered-list-flexbox-li42-gift-link';
+unorderedListFlexboxLi42GiftLink.href = `https://www.mcdonalds.com/us/
+en-us/faq/arch-card.html`;
+unorderedListFlexboxLi42GiftLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi42GiftLink.style.textDecoration = 'none';
+unorderedListFlexboxLi42GiftLink.style.listStyleType = 'none';
+unorderedListFlexboxLi42GiftLink.style.width = '180px';
+unorderedListFlexboxLi42GiftLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi42GiftLink);
+
+const unorderedListFlexboxLi42Gift = document.createElement('li');
+unorderedListFlexboxLi42Gift.id = 'unordered-list-flexbox-li42-gift';
+unorderedListFlexboxLi42Gift.textContent = 'Gift Card FAQs';
+unorderedListFlexboxLi42Gift.style.listStyleType = 'none';
+unorderedListFlexboxLi42Gift.style.width = '180px';
+unorderedListFlexboxLi42Gift.style.marginBottom = '6px';
+unorderedListFlexboxLi42GiftLink.appendChild(unorderedListFlexboxLi42Gift);
+
+const unorderedListFlexboxLi43DonationsLink = document.createElement('a');
+unorderedListFlexboxLi43DonationsLink.id = 'unordered-list-flexbox-li43-donations-link';
+unorderedListFlexboxLi43DonationsLink.href = `https://www.mcdonalds.com/us/en-us/faq/
+business.html#donation`;
+unorderedListFlexboxLi43DonationsLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi43DonationsLink.style.textDecoration = 'none';
+unorderedListFlexboxLi43DonationsLink.style.listStyleType = 'none';
+unorderedListFlexboxLi43DonationsLink.style.width = '180px';
+unorderedListFlexboxLi43DonationsLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi43DonationsLink);
+
+const unorderedListFlexboxLi43Donations = document.createElement('li');
+unorderedListFlexboxLi43Donations.id = 'unordered-list-flexbox-li43-donations';
+unorderedListFlexboxLi43Donations.textContent = 'Donations';
+unorderedListFlexboxLi43Donations.style.listStyleType = 'none';
+unorderedListFlexboxLi43Donations.style.width = '180px';
+unorderedListFlexboxLi43Donations.style.marginBottom = '6px';
+unorderedListFlexboxLi43DonationsLink.appendChild(unorderedListFlexboxLi43Donations);
+
+const unorderedListFlexboxLi44EmployLink = document.createElement('a');
+unorderedListFlexboxLi44EmployLink.id = 'unordered-list-flexbox-li44-employ-link';
+unorderedListFlexboxLi44EmployLink.href = `https://www.mcdonalds.com/us/en-us/faq/
+employment.html`;
+unorderedListFlexboxLi44EmployLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi44EmployLink.style.textDecoration = 'none';
+unorderedListFlexboxLi44EmployLink.style.listStyleType = 'none';
+unorderedListFlexboxLi44EmployLink.style.width = '180px';
+unorderedListFlexboxLi44EmployLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi44EmployLink);
+
+const unorderedListFlexboxLi44Employ = document.createElement('li');
+unorderedListFlexboxLi44Employ.id = 'unordered-list-flexbox-li44-employ';
+unorderedListFlexboxLi44Employ.textContent = 'Employment';
+unorderedListFlexboxLi44Employ.style.listStyleType = 'none';
+unorderedListFlexboxLi44Employ.style.width = '180px';
+unorderedListFlexboxLi44Employ.style.marginBottom = '6px';
+unorderedListFlexboxLi44EmployLink.appendChild(unorderedListFlexboxLi44Employ);
+
+const unorderedListFlexboxLi45feedbackLink = document.createElement('a');
+unorderedListFlexboxLi45feedbackLink.id = 'unordered-list-flexbox-li45-feedback-link';
+unorderedListFlexboxLi45feedbackLink.href = `https://www.mcdonalds.com/us/
+en-us/feedback.html`;
+unorderedListFlexboxLi45feedbackLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi45feedbackLink.style.textDecoration = 'none';
+unorderedListFlexboxLi45feedbackLink.style.listStyleType = 'none';
+unorderedListFlexboxLi45feedbackLink.style.width = '180px';
+unorderedListFlexboxLi45feedbackLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi45feedbackLink);
+
+const unorderedListFlexboxLi45feedback = document.createElement('li');
+unorderedListFlexboxLi45feedback.id = 'unordered-list-flexbox-li45-feedback';
+unorderedListFlexboxLi45feedback.textContent = 'Customer Feedback';
+unorderedListFlexboxLi45feedback.style.listStyleType = 'none';
+unorderedListFlexboxLi45feedback.style.width = '180px';
+unorderedListFlexboxLi45feedback.style.marginBottom = '6px';
+unorderedListFlexboxLi45feedbackLink.appendChild(unorderedListFlexboxLi45feedback);
+
+const unorderedListFlexboxLi46FaqLink = document.createElement('a');
+unorderedListFlexboxLi46FaqLink.id = 'unordered-list-flexbox-li46-faq-link';
+unorderedListFlexboxLi46FaqLink.href = `https://www.mcdonalds.com/us/
+en-us/faq.html`;
+unorderedListFlexboxLi46FaqLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi46FaqLink.style.textDecoration = 'none';
+unorderedListFlexboxLi46FaqLink.style.listStyleType = 'none';
+unorderedListFlexboxLi46FaqLink.style.width = '180px';
+unorderedListFlexboxLi46FaqLink.style.marginBottom = '6px';
+unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi46FaqLink);
+
+const unorderedListFlexboxLi46Faq = document.createElement('li');
+unorderedListFlexboxLi46Faq.id = 'unordered-list-flexbox-li46-faq';
+unorderedListFlexboxLi46Faq.textContent = 'Frequently Asked Questions';
+unorderedListFlexboxLi46Faq.style.listStyleType = 'none';
+unorderedListFlexboxLi46Faq.style.width = '180px';
+unorderedListFlexboxLi46Faq.style.marginBottom = '6px';
+unorderedListFlexboxLi46FaqLink.appendChild(unorderedListFlexboxLi46Faq);
 
 const iconsFlexbox = document.createElement('section');
 iconsFlexbox.id = 'icons-flexbox';
