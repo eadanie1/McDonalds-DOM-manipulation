@@ -373,6 +373,69 @@ bottomHeaderLinksContainerLiRewLink.style.color = 'rgb(41,41,41)';
 bottomHeaderLinksContainerLiRewLink.style.textDecoration = 'none';
 bottomHeaderLinksContainerLiRew.appendChild(bottomHeaderLinksContainerLiRewLink);
 
+const bottomHeaderLinksContainerLiDeal = document.createElement('li');
+bottomHeaderLinksContainerLiDeal.id = 'bottom-header-links-container-li-deal';
+bottomHeaderLinksContainerLiDeal.style.display = 'inline';
+bottomHeaderLinksContainerLiDeal.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiDeal);
+
+const bottomHeaderLinksContainerLiDealLink = document.createElement('a');
+bottomHeaderLinksContainerLiDealLink.id = 'bottom-header-links-container-li-deal-link';
+bottomHeaderLinksContainerLiDealLink.href = `https://www.mcdonalds.com/us/en-us/deals.html`;
+bottomHeaderLinksContainerLiDealLink.textContent = 'Excusive Deals';
+bottomHeaderLinksContainerLiDealLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiDealLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiDealLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiDeal.appendChild(bottomHeaderLinksContainerLiDealLink);
+
+const bottomHeaderLinksContainerLiFood = document.createElement('li');
+bottomHeaderLinksContainerLiFood.id = 'bottom-header-links-container-li-food';
+bottomHeaderLinksContainerLiFood.style.display = 'inline';
+bottomHeaderLinksContainerLiFood.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiFood);
+
+const bottomHeaderLinksContainerLiFoodLink = document.createElement('a');
+bottomHeaderLinksContainerLiFoodLink.id = 'bottom-header-links-container-li-food-link';
+bottomHeaderLinksContainerLiFoodLink.href = `https://www.mcdonalds.com/us/en-us/about-
+our-food.html`;
+bottomHeaderLinksContainerLiFoodLink.textContent = 'About Our Food';
+bottomHeaderLinksContainerLiFoodLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiFoodLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiFoodLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiFood.appendChild(bottomHeaderLinksContainerLiFoodLink);
+
+const bottomHeaderLinksContainerLiLocate = document.createElement('li');
+bottomHeaderLinksContainerLiLocate.id = 'bottom-header-links-container-li-locate';
+bottomHeaderLinksContainerLiLocate.style.display = 'inline';
+bottomHeaderLinksContainerLiLocate.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiLocate);
+
+const bottomHeaderLinksContainerLiLocateLink = document.createElement('a');
+bottomHeaderLinksContainerLiLocateLink.id = 'bottom-header-links-container-li-locate-link';
+bottomHeaderLinksContainerLiLocateLink.href = `https://www.mcdonalds.com/us/en-us/restaurant
+-locator.html`;
+bottomHeaderLinksContainerLiLocateLink.textContent = 'Locate';
+bottomHeaderLinksContainerLiLocateLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiLocateLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiLocateLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiLocate.appendChild(bottomHeaderLinksContainerLiLocateLink);
+
+const bottomHeaderLinksContainerLiGift = document.createElement('li');
+bottomHeaderLinksContainerLiGift.id = 'bottom-header-links-container-li-gift';
+bottomHeaderLinksContainerLiGift.style.display = 'inline';
+bottomHeaderLinksContainerLiGift.style.margin = '0 25px 0 0';
+bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiGift);
+
+const bottomHeaderLinksContainerLiGiftLink = document.createElement('a');
+bottomHeaderLinksContainerLiGiftLink.id = 'bottom-header-links-container-li-gift-link';
+bottomHeaderLinksContainerLiGiftLink.href = `https://www.mcdonalds.com/us/en-us/
+arch-card.html`;
+bottomHeaderLinksContainerLiGiftLink.textContent = 'Gift Cards';
+bottomHeaderLinksContainerLiGiftLink.style.listStyleType = 'none';
+bottomHeaderLinksContainerLiGiftLink.style.color = 'rgb(41,41,41)';
+bottomHeaderLinksContainerLiGiftLink.style.textDecoration = 'none';
+bottomHeaderLinksContainerLiGift.appendChild(bottomHeaderLinksContainerLiGiftLink);
+
 // MAIN CONTAINER AND MAIN CONTENT CONTAINER
 
 const mainFlexboxContainer = document.createElement('div');
@@ -495,7 +558,6 @@ tripleGridContainer.appendChild(tripleGridSubDiv2);
 const gridImage2 = document.createElement('img');
 gridImage2.id = 'grid-image2';
 gridImage2.src = 'images/Cynthia_G_3Col_376x252_Desktop_3-column-desktop.jpeg';
-// gridImage2.alt = 'food-experts-main-image';
 gridImage2.style.width = '100%';
 tripleGridSubDiv2.appendChild(gridImage2);
 
@@ -546,7 +608,6 @@ tripleGridContainer.appendChild(tripleGridSubDiv3);
 const gridImage3 = document.createElement('img');
 gridImage3.id = 'grid-image3';
 gridImage3.src = 'images/Suppliers_3Col_3-column-desktop.jpeg';
-// gridImage3.alt = 'food-experts-main-image';
 gridImage3.style.width = '100%';
 tripleGridSubDiv3.appendChild(gridImage3);
 
@@ -589,28 +650,555 @@ gridButtons3.style.lineHeight = '24px';
 gridButtons3.style.cursor = 'pointer';
 gridButtons3Link.appendChild(gridButtons3);
 
+// BOTTOM SECTION: BOTTOM LINKS
+
 const unorderedListFlexbox = document.createElement('section');
 unorderedListFlexbox.id = 'unordered-list-flexbox';
 unorderedListFlexbox.style.display = 'flex';
 unorderedListFlexbox.style.justifyContent = 'space-between';
 unorderedListFlexbox.style.padding = '0 20px';
 mainContentContainer.appendChild(unorderedListFlexbox);
-// add id to and add div inside of triple grid container for each
 
-const listHeader = document.createElement('div');
-listHeader.id = 'list-header';
-listHeader.style.fontWeight = '700';
-listHeader.style.marginBottom = '18px';
+const unorderedListFlexboxSubDiv1 = document.createElement('div');
+unorderedListFlexboxSubDiv1.id = 'unordered-list-flexbox-sub-div1';
+unorderedListFlexbox.appendChild(unorderedListFlexboxSubDiv1);
 
-const unorderedListFlexboxUl = document.createElement('div');
-unorderedListFlexboxUl.id = 'unordered-list-flexbox-ul';
-unorderedListFlexboxUl.style.padding = '0';
+const listHeader1 = document.createElement('div');
+listHeader1.id = 'list-header1';
+listHeader1.textContent = 'About Us';
+listHeader1.style.fontWeight = '700';
+listHeader1.style.marginBottom = '18px';
+unorderedListFlexboxSubDiv1.appendChild(listHeader1);
 
-const unorderedListFlexboxLi = document.createElement('div');
-unorderedListFlexboxLi.id = 'unordered-list-flexbox-li';
-unorderedListFlexboxLi.style.listStyleType = 'none';
-unorderedListFlexboxLi.style.width = '180px';
-unorderedListFlexboxLi.style.marginBottom = '6px';
+const unorderedListFlexboxUl1 = document.createElement('ul');
+unorderedListFlexboxUl1.id = 'unordered-list-flexbox-ul1';
+unorderedListFlexboxUl1.style.padding = '0';
+unorderedListFlexboxSubDiv1.appendChild(unorderedListFlexboxUl1);
+
+const unorderedListFlexboxLi1AboutLink = document.createElement('a');
+unorderedListFlexboxLi1AboutLink.id = 'unordered-list-flexbox-li1-about-link';
+unorderedListFlexboxLi1AboutLink.href = `https://www.mcdonalds.com/us/en-us/
+about-us.html`;
+unorderedListFlexboxLi1AboutLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi1AboutLink.style.textDecoration = 'none';
+unorderedListFlexboxLi1AboutLink.style.listStyleType = 'none';
+unorderedListFlexboxLi1AboutLink.style.width = '180px';
+unorderedListFlexboxLi1AboutLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi1AboutLink);
+
+const unorderedListFlexboxLi1About = document.createElement('li');
+unorderedListFlexboxLi1About.id = 'unordered-list-flexbox-li1-about';
+unorderedListFlexboxLi1About.textContent = 'About Us Overview';
+unorderedListFlexboxLi1About.style.listStyleType = 'none';
+unorderedListFlexboxLi1About.style.width = '180px';
+unorderedListFlexboxLi1About.style.marginBottom = '6px';
+unorderedListFlexboxLi1AboutLink.appendChild(unorderedListFlexboxLi1About);
+
+const unorderedListFlexboxLi2TeamLink = document.createElement('a');
+unorderedListFlexboxLi2TeamLink.id = 'unordered-list-flexbox-li2-team-link';
+unorderedListFlexboxLi2TeamLink.href = `https://www.mcdonalds.com/us/en-us/
+about-us/leadership-team.html`;
+unorderedListFlexboxLi2TeamLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi2TeamLink.style.textDecoration = 'none';
+unorderedListFlexboxLi2TeamLink.style.listStyleType = 'none';
+unorderedListFlexboxLi2TeamLink.style.width = '180px';
+unorderedListFlexboxLi2TeamLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi2TeamLink);
+
+const unorderedListFlexboxLi2Team = document.createElement('li');
+unorderedListFlexboxLi2Team.id = 'unordered-list-flexbox-li2-team';
+unorderedListFlexboxLi2Team.textContent = 'Leadership Team';
+unorderedListFlexboxLi2Team.style.listStyleType = 'none';
+unorderedListFlexboxLi2Team.style.width = '180px';
+unorderedListFlexboxLi2Team.style.marginBottom = '6px';
+unorderedListFlexboxLi2TeamLink.appendChild(unorderedListFlexboxLi2Team);
+
+const unorderedListFlexboxLi3ValuesLink = document.createElement('a');
+unorderedListFlexboxLi3ValuesLink.id = 'unordered-list-flexbox-li3-values-link';
+unorderedListFlexboxLi3ValuesLink.href = `https://www.mcdonalds.com/us/en-us/
+about-us/values-in-action.html`;
+unorderedListFlexboxLi3ValuesLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi3ValuesLink.style.textDecoration = 'none';
+unorderedListFlexboxLi3ValuesLink.style.listStyleType = 'none';
+unorderedListFlexboxLi3ValuesLink.style.width = '180px';
+unorderedListFlexboxLi3ValuesLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi3ValuesLink);
+
+const unorderedListFlexboxLi3Values = document.createElement('li');
+unorderedListFlexboxLi3Values.id = 'unordered-list-flexbox-li3-values';
+unorderedListFlexboxLi3Values.textContent = 'Values In Action';
+unorderedListFlexboxLi3Values.style.listStyleType = 'none';
+unorderedListFlexboxLi3Values.style.width = '180px';
+unorderedListFlexboxLi3Values.style.marginBottom = '6px';
+unorderedListFlexboxLi3ValuesLink.appendChild(unorderedListFlexboxLi3Values);
+
+const unorderedListFlexboxLi4FranchiseLink = document.createElement('a');
+unorderedListFlexboxLi4FranchiseLink.id = 'unordered-list-flexbox-li4-franchise-link';
+unorderedListFlexboxLi4FranchiseLink.href = `https://www.mcdonalds.com/us/en-us/
+us-franchising.html`;
+unorderedListFlexboxLi4FranchiseLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi4FranchiseLink.style.textDecoration = 'none';
+unorderedListFlexboxLi4FranchiseLink.style.listStyleType = 'none';
+unorderedListFlexboxLi4FranchiseLink.style.width = '180px';
+unorderedListFlexboxLi4FranchiseLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi4FranchiseLink);
+
+const unorderedListFlexboxLi4Franchise = document.createElement('li');
+unorderedListFlexboxLi4Franchise.id = 'unordered-list-flexbox-li4-franchise';
+unorderedListFlexboxLi4Franchise.textContent = 'Franchise Info';
+unorderedListFlexboxLi4Franchise.style.listStyleType = 'none';
+unorderedListFlexboxLi4Franchise.style.width = '180px';
+unorderedListFlexboxLi4Franchise.style.marginBottom = '6px';
+unorderedListFlexboxLi4FranchiseLink.appendChild(unorderedListFlexboxLi4Franchise);
+
+const unorderedListFlexboxLi5RecallsLink = document.createElement('a');
+unorderedListFlexboxLi5RecallsLink.id = 'unordered-list-flexbox-li5-recalls-link';
+unorderedListFlexboxLi5RecallsLink.href = `https://www.mcdonalds.com/us/en-us/
+about-us/recalls.html`;
+unorderedListFlexboxLi5RecallsLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi5RecallsLink.style.textDecoration = 'none';
+unorderedListFlexboxLi5RecallsLink.style.listStyleType = 'none';
+unorderedListFlexboxLi5RecallsLink.style.width = '180px';
+unorderedListFlexboxLi5RecallsLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi5RecallsLink);
+
+const unorderedListFlexboxLi5Recalls = document.createElement('li');
+unorderedListFlexboxLi5Recalls.id = 'unordered-list-flexbox-li5-recalls';
+unorderedListFlexboxLi5Recalls.textContent = 'Recalls & Alerts';
+unorderedListFlexboxLi5Recalls.style.listStyleType = 'none';
+unorderedListFlexboxLi5Recalls.style.width = '180px';
+unorderedListFlexboxLi5Recalls.style.marginBottom = '6px';
+unorderedListFlexboxLi5RecallsLink.appendChild(unorderedListFlexboxLi5Recalls);
+
+const unorderedListFlexboxLi6RealLink = document.createElement('a');
+unorderedListFlexboxLi6RealLink.id = 'unordered-list-flexbox-li6-real-link';
+unorderedListFlexboxLi6RealLink.href = `https://www.mcdonalds.com/us/en-us/
+about-us/franchising/real-estate.html`;
+unorderedListFlexboxLi6RealLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi6RealLink.style.textDecoration = 'none';
+unorderedListFlexboxLi6RealLink.style.listStyleType = 'none';
+unorderedListFlexboxLi6RealLink.style.width = '180px';
+unorderedListFlexboxLi6RealLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi6RealLink);
+
+const unorderedListFlexboxLi6Real = document.createElement('li');
+unorderedListFlexboxLi6Real.id = 'unordered-list-flexbox-li6-real';
+unorderedListFlexboxLi6Real.textContent = 'Real Estate';
+unorderedListFlexboxLi6Real.style.listStyleType = 'none';
+unorderedListFlexboxLi6Real.style.width = '180px';
+unorderedListFlexboxLi6Real.style.marginBottom = '6px';
+unorderedListFlexboxLi6RealLink.appendChild(unorderedListFlexboxLi6Real);
+
+const unorderedListFlexboxLi7AccessLink = document.createElement('a');
+unorderedListFlexboxLi7AccessLink.id = 'unordered-list-flexbox-li7-access-link';
+unorderedListFlexboxLi7AccessLink.href = `https://www.mcdonalds.com/us/en-us/
+accessibility.html`;
+unorderedListFlexboxLi7AccessLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi7AccessLink.style.textDecoration = 'none';
+unorderedListFlexboxLi7AccessLink.style.listStyleType = 'none';
+unorderedListFlexboxLi7AccessLink.style.width = '180px';
+unorderedListFlexboxLi7AccessLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi7AccessLink);
+
+const unorderedListFlexboxLi7Access = document.createElement('li');
+unorderedListFlexboxLi7Access.id = 'unordered-list-flexbox-li7-access';
+unorderedListFlexboxLi7Access.textContent = 'Accessibility';
+unorderedListFlexboxLi7Access.style.listStyleType = 'none';
+unorderedListFlexboxLi7Access.style.width = '180px';
+unorderedListFlexboxLi7Access.style.marginBottom = '6px';
+unorderedListFlexboxLi7AccessLink.appendChild(unorderedListFlexboxLi7Access);
+
+const unorderedListFlexboxLi8investLink = document.createElement('a');
+unorderedListFlexboxLi8investLink.id = 'unordered-list-flexbox-li8-invest-link';
+unorderedListFlexboxLi8investLink.href = `https://corporate.mcdonalds.com/
+corpmcd/investors.html`;
+unorderedListFlexboxLi8investLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi8investLink.style.textDecoration = 'none';
+unorderedListFlexboxLi8investLink.style.listStyleType = 'none';
+unorderedListFlexboxLi8investLink.style.width = '180px';
+unorderedListFlexboxLi8investLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi8investLink);
+
+const unorderedListFlexboxLi8invest = document.createElement('li');
+unorderedListFlexboxLi8invest.id = 'unordered-list-flexbox-li8-invest';
+unorderedListFlexboxLi8invest.textContent = 'Investor Relations';
+unorderedListFlexboxLi8invest.style.listStyleType = 'none';
+unorderedListFlexboxLi8invest.style.width = '180px';
+unorderedListFlexboxLi8invest.style.marginBottom = '6px';
+unorderedListFlexboxLi8investLink.appendChild(unorderedListFlexboxLi8invest);
+
+const unorderedListFlexboxLi9NewsLink = document.createElement('a');
+unorderedListFlexboxLi9NewsLink.id = 'unordered-list-flexbox-li9-news-link';
+unorderedListFlexboxLi9NewsLink.href = `https://corporate.mcdonalds.com/
+corpmcd/our-stories.html`;
+unorderedListFlexboxLi9NewsLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi9NewsLink.style.textDecoration = 'none';
+unorderedListFlexboxLi9NewsLink.style.listStyleType = 'none';
+unorderedListFlexboxLi9NewsLink.style.width = '180px';
+unorderedListFlexboxLi9NewsLink.style.marginBottom = '6px';
+unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi9NewsLink);
+
+const unorderedListFlexboxLi9News = document.createElement('li');
+unorderedListFlexboxLi9News.id = 'unordered-list-flexbox-li9-news';
+unorderedListFlexboxLi9News.textContent = 'News & Notifications';
+unorderedListFlexboxLi9News.style.listStyleType = 'none';
+unorderedListFlexboxLi9News.style.width = '180px';
+unorderedListFlexboxLi9News.style.marginBottom = '6px';
+unorderedListFlexboxLi9NewsLink.appendChild(unorderedListFlexboxLi9News);
+
+const unorderedListFlexboxSubDiv2 = document.createElement('div');
+unorderedListFlexboxSubDiv2.id = 'unordered-list-flexbox-sub-div2';
+unorderedListFlexbox.appendChild(unorderedListFlexboxSubDiv2);
+
+const listHeader2 = document.createElement('div');
+listHeader2.id = 'list-header2';
+listHeader2.textContent = 'Services';
+listHeader2.style.fontWeight = '700';
+listHeader2.style.marginBottom = '18px';
+unorderedListFlexboxSubDiv2.appendChild(listHeader2);
+
+const unorderedListFlexboxUl2 = document.createElement('ul');
+unorderedListFlexboxUl2.id = 'unordered-list-flexbox-ul2';
+unorderedListFlexboxUl2.style.padding = '0';
+unorderedListFlexboxSubDiv2.appendChild(unorderedListFlexboxUl2);
+
+const unorderedListFlexboxLi21ServicesLink = document.createElement('a');
+unorderedListFlexboxLi21ServicesLink.id = 'unordered-list-flexbox-li21-services-link';
+unorderedListFlexboxLi21ServicesLink.href = `https://www.mcdonalds.com/us/en-us/
+services.html`;
+unorderedListFlexboxLi21ServicesLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi21ServicesLink.style.textDecoration = 'none';
+unorderedListFlexboxLi21ServicesLink.style.listStyleType = 'none';
+unorderedListFlexboxLi21ServicesLink.style.width = '180px';
+unorderedListFlexboxLi21ServicesLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi21ServicesLink);
+
+const unorderedListFlexboxLi21Services = document.createElement('li');
+unorderedListFlexboxLi21Services.id = 'unordered-list-flexbox-li21-services';
+unorderedListFlexboxLi21Services.textContent = 'Services Overview';
+unorderedListFlexboxLi21Services.style.listStyleType = 'none';
+unorderedListFlexboxLi21Services.style.width = '180px';
+unorderedListFlexboxLi21Services.style.marginBottom = '6px';
+unorderedListFlexboxLi21ServicesLink.appendChild(unorderedListFlexboxLi21Services);
+
+const unorderedListFlexboxLi22WifiLink = document.createElement('a');
+unorderedListFlexboxLi22WifiLink.id = 'unordered-list-flexbox-li22-wifi-link';
+unorderedListFlexboxLi22WifiLink.href = `https://www.mcdonalds.com/us/en-us/
+services/free-wi-fi.html`;
+unorderedListFlexboxLi22WifiLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi22WifiLink.style.textDecoration = 'none';
+unorderedListFlexboxLi22WifiLink.style.listStyleType = 'none';
+unorderedListFlexboxLi22WifiLink.style.width = '180px';
+unorderedListFlexboxLi22WifiLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi22WifiLink);
+
+const unorderedListFlexboxLi22Wifi = document.createElement('li');
+unorderedListFlexboxLi22Wifi.id = 'unordered-list-flexbox-li22-wifi';
+unorderedListFlexboxLi22Wifi.textContent = 'Wi-Fi';
+unorderedListFlexboxLi22Wifi.style.listStyleType = 'none';
+unorderedListFlexboxLi22Wifi.style.width = '180px';
+unorderedListFlexboxLi22Wifi.style.marginBottom = '6px';
+unorderedListFlexboxLi22WifiLink.appendChild(unorderedListFlexboxLi22Wifi);
+
+const unorderedListFlexboxLi23PlayLink = document.createElement('a');
+unorderedListFlexboxLi23PlayLink.id = 'unordered-list-flexbox-li23-play-link';
+unorderedListFlexboxLi23PlayLink.href = `https://www.mcdonalds.com/us/en-us/
+services/playplaces-and-parties.html`;
+unorderedListFlexboxLi23PlayLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi23PlayLink.style.textDecoration = 'none';
+unorderedListFlexboxLi23PlayLink.style.listStyleType = 'none';
+unorderedListFlexboxLi23PlayLink.style.width = '180px';
+unorderedListFlexboxLi23PlayLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi23PlayLink);
+
+const unorderedListFlexboxLi23Play = document.createElement('li');
+unorderedListFlexboxLi23Play.id = 'unordered-list-flexbox-li23-play';
+unorderedListFlexboxLi23Play.textContent = 'Playplaces & Parties';
+unorderedListFlexboxLi23Play.style.listStyleType = 'none';
+unorderedListFlexboxLi23Play.style.width = '180px';
+unorderedListFlexboxLi23Play.style.marginBottom = '6px';
+unorderedListFlexboxLi23PlayLink.appendChild(unorderedListFlexboxLi23Play);
+
+const unorderedListFlexboxLi24DeliveryLink = document.createElement('a');
+unorderedListFlexboxLi24DeliveryLink.id = 'unordered-list-flexbox-li24-delivery-link';
+unorderedListFlexboxLi24DeliveryLink.href = `https://www.mcdonalds.com/us/en-us/
+mcdelivery.html`;
+unorderedListFlexboxLi24DeliveryLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi24DeliveryLink.style.textDecoration = 'none';
+unorderedListFlexboxLi24DeliveryLink.style.listStyleType = 'none';
+unorderedListFlexboxLi24DeliveryLink.style.width = '180px';
+unorderedListFlexboxLi24DeliveryLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi24DeliveryLink);
+
+const unorderedListFlexboxLi24Delivery = document.createElement('li');
+unorderedListFlexboxLi24Delivery.id = 'unordered-list-flexbox-li24-delivery';
+unorderedListFlexboxLi24Delivery.textContent = 'McDelivery®';
+unorderedListFlexboxLi24Delivery.style.listStyleType = 'none';
+unorderedListFlexboxLi24Delivery.style.width = '180px';
+unorderedListFlexboxLi24Delivery.style.marginBottom = '6px';
+unorderedListFlexboxLi24DeliveryLink.appendChild(unorderedListFlexboxLi24Delivery);
+
+const unorderedListFlexboxLi25MobileLink = document.createElement('a');
+unorderedListFlexboxLi25MobileLink.id = 'unordered-list-flexbox-li25-mobile-link';
+unorderedListFlexboxLi25MobileLink.href = `https://www.mcdonalds.com/us/en-us/
+mobile-order-and-pay.html`;
+unorderedListFlexboxLi25MobileLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi25MobileLink.style.textDecoration = 'none';
+unorderedListFlexboxLi25MobileLink.style.listStyleType = 'none';
+unorderedListFlexboxLi25MobileLink.style.width = '180px';
+unorderedListFlexboxLi25MobileLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi25MobileLink);
+
+const unorderedListFlexboxLi25Mobile = document.createElement('li');
+unorderedListFlexboxLi25Mobile.id = 'unordered-list-flexbox-li25-mobile';
+unorderedListFlexboxLi25Mobile.textContent = 'Mobile Order & Pay';
+unorderedListFlexboxLi25Mobile.style.listStyleType = 'none';
+unorderedListFlexboxLi25Mobile.style.width = '180px';
+unorderedListFlexboxLi25Mobile.style.marginBottom = '6px';
+unorderedListFlexboxLi25MobileLink.appendChild(unorderedListFlexboxLi25Mobile);
+
+const unorderedListFlexboxLi26TrendLink = document.createElement('a');
+unorderedListFlexboxLi26TrendLink.id = 'unordered-list-flexbox-li26-trend-link';
+unorderedListFlexboxLi26TrendLink.href = `https://www.mcdonalds.com/us/
+en-us/whats-hot.html`;
+unorderedListFlexboxLi26TrendLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi26TrendLink.style.textDecoration = 'none';
+unorderedListFlexboxLi26TrendLink.style.listStyleType = 'none';
+unorderedListFlexboxLi26TrendLink.style.width = '180px';
+unorderedListFlexboxLi26TrendLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi26TrendLink);
+
+const unorderedListFlexboxLi26Trend = document.createElement('li');
+unorderedListFlexboxLi26Trend.id = 'unordered-list-flexbox-li26-trend';
+unorderedListFlexboxLi26Trend.textContent = 'Trending Now';
+unorderedListFlexboxLi26Trend.style.listStyleType = 'none';
+unorderedListFlexboxLi26Trend.style.width = '180px';
+unorderedListFlexboxLi26Trend.style.marginBottom = '6px';
+unorderedListFlexboxLi26TrendLink.appendChild(unorderedListFlexboxLi26Trend);
+
+const unorderedListFlexboxLi27MerchLink = document.createElement('a');
+unorderedListFlexboxLi27MerchLink.id = 'unordered-list-flexbox-li27-merch-link';
+unorderedListFlexboxLi27MerchLink.href = `https://goldenarchesunlimited.com/`;
+unorderedListFlexboxLi27MerchLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi27MerchLink.style.textDecoration = 'none';
+unorderedListFlexboxLi27MerchLink.style.listStyleType = 'none';
+unorderedListFlexboxLi27MerchLink.style.width = '180px';
+unorderedListFlexboxLi27MerchLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi27MerchLink);
+
+const unorderedListFlexboxLi27Merch = document.createElement('li');
+unorderedListFlexboxLi27Merch.id = 'unordered-list-flexbox-li27-merch';
+unorderedListFlexboxLi27Merch.textContent = 'McDonald\'s Merchandise';
+unorderedListFlexboxLi27Merch.style.listStyleType = 'none';
+unorderedListFlexboxLi27Merch.style.width = '180px';
+unorderedListFlexboxLi27Merch.style.marginBottom = '6px';
+unorderedListFlexboxLi27MerchLink.appendChild(unorderedListFlexboxLi27Merch);
+
+const unorderedListFlexboxLi28FunLink = document.createElement('a');
+unorderedListFlexboxLi28FunLink.id = 'unordered-list-flexbox-li28-fun-link';
+unorderedListFlexboxLi28FunLink.href = `https://www.mcdonalds.com/us/en-us/
+family-fun-hub.html`;
+unorderedListFlexboxLi28FunLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi28FunLink.style.textDecoration = 'none';
+unorderedListFlexboxLi28FunLink.style.listStyleType = 'none';
+unorderedListFlexboxLi28FunLink.style.width = '180px';
+unorderedListFlexboxLi28FunLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi28FunLink);
+
+const unorderedListFlexboxLi28Fun = document.createElement('li');
+unorderedListFlexboxLi28Fun.id = 'unordered-list-flexbox-li28-fun';
+unorderedListFlexboxLi28Fun.textContent = 'Family Fun Hub';
+unorderedListFlexboxLi28Fun.style.listStyleType = 'none';
+unorderedListFlexboxLi28Fun.style.width = '180px';
+unorderedListFlexboxLi28Fun.style.marginBottom = '6px';
+unorderedListFlexboxLi28FunLink.appendChild(unorderedListFlexboxLi28Fun);
+
+const unorderedListFlexboxLi29RewLink = document.createElement('a');
+unorderedListFlexboxLi29RewLink.id = 'unordered-list-flexbox-li29-rew-link';
+unorderedListFlexboxLi29RewLink.href = `https://www.mcdonalds.com/us/en-us/
+mymcdonalds.html`;
+unorderedListFlexboxLi29RewLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi29RewLink.style.textDecoration = 'none';
+unorderedListFlexboxLi29RewLink.style.listStyleType = 'none';
+unorderedListFlexboxLi29RewLink.style.width = '180px';
+unorderedListFlexboxLi29RewLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi29RewLink);
+
+const unorderedListFlexboxLi29Rew = document.createElement('li');
+unorderedListFlexboxLi29Rew.id = 'unordered-list-flexbox-li29-rew';
+unorderedListFlexboxLi29Rew.textContent = 'McDonald\'s Rewards';
+unorderedListFlexboxLi29Rew.style.listStyleType = 'none';
+unorderedListFlexboxLi29Rew.style.width = '180px';
+unorderedListFlexboxLi29Rew.style.marginBottom = '6px';
+unorderedListFlexboxLi29RewLink.appendChild(unorderedListFlexboxLi29Rew);
+
+const unorderedListFlexboxLi210cafeLink = document.createElement('a');
+unorderedListFlexboxLi210cafeLink.id = 'unordered-list-flexbox-li210-cafe-link';
+unorderedListFlexboxLi210cafeLink.href = `https://www.mcdonalds.com/us/en-us/
+mccafe.html`;
+unorderedListFlexboxLi210cafeLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi210cafeLink.style.textDecoration = 'none';
+unorderedListFlexboxLi210cafeLink.style.listStyleType = 'none';
+unorderedListFlexboxLi210cafeLink.style.width = '180px';
+unorderedListFlexboxLi210cafeLink.style.marginBottom = '6px';
+unorderedListFlexboxUl2.appendChild(unorderedListFlexboxLi210cafeLink);
+
+const unorderedListFlexboxLi210cafe = document.createElement('li');
+unorderedListFlexboxLi210cafe.id = 'unordered-list-flexbox-li210-cafe';
+unorderedListFlexboxLi210cafe.textContent = 'McCafé®';
+unorderedListFlexboxLi210cafe.style.listStyleType = 'none';
+unorderedListFlexboxLi210cafe.style.width = '180px';
+unorderedListFlexboxLi210cafe.style.marginBottom = '6px';
+unorderedListFlexboxLi210cafeLink.appendChild(unorderedListFlexboxLi210cafe);
+
+const unorderedListFlexboxSubDiv3 = document.createElement('div');
+unorderedListFlexboxSubDiv3.id = 'unordered-list-flexbox-sub-div3';
+unorderedListFlexbox.appendChild(unorderedListFlexboxSubDiv3);
+
+const listHeader3 = document.createElement('div');
+listHeader3.id = 'list-header3';
+listHeader3.textContent = 'Community';
+listHeader3.style.fontWeight = '700';
+listHeader3.style.marginBottom = '18px';
+unorderedListFlexboxSubDiv3.appendChild(listHeader3);
+
+const unorderedListFlexboxUl3 = document.createElement('ul');
+unorderedListFlexboxUl3.id = 'unordered-list-flexbox-ul3';
+unorderedListFlexboxUl3.style.padding = '0';
+unorderedListFlexboxSubDiv3.appendChild(unorderedListFlexboxUl3);
+
+const unorderedListFlexboxLi31ComLink = document.createElement('a');
+unorderedListFlexboxLi31ComLink.id = 'unordered-list-flexbox-li31-com-link';
+unorderedListFlexboxLi31ComLink.href = `https://www.mcdonalds.com/us/en-us/
+community.html`;
+unorderedListFlexboxLi31ComLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi31ComLink.style.textDecoration = 'none';
+unorderedListFlexboxLi31ComLink.style.listStyleType = 'none';
+unorderedListFlexboxLi31ComLink.style.width = '180px';
+unorderedListFlexboxLi31ComLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi31ComLink);
+
+const unorderedListFlexboxLi31Com = document.createElement('li');
+unorderedListFlexboxLi31Com.id = 'unordered-list-flexbox-li31-com';
+unorderedListFlexboxLi31Com.textContent = 'Community Overview';
+unorderedListFlexboxLi31Com.style.listStyleType = 'none';
+unorderedListFlexboxLi31Com.style.width = '180px';
+unorderedListFlexboxLi31Com.style.marginBottom = '6px';
+unorderedListFlexboxLi31ComLink.appendChild(unorderedListFlexboxLi31Com);
+
+const unorderedListFlexboxLi32ServLink = document.createElement('a');
+unorderedListFlexboxLi32ServLink.id = 'unordered-list-flexbox-li32-serv-link';
+unorderedListFlexboxLi32ServLink.href = `https://www.mcdonalds.com/us/en-us/
+community.html`;
+unorderedListFlexboxLi32ServLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi32ServLink.style.textDecoration = 'none';
+unorderedListFlexboxLi32ServLink.style.listStyleType = 'none';
+unorderedListFlexboxLi32ServLink.style.width = '180px';
+unorderedListFlexboxLi32ServLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi32ServLink);
+
+const unorderedListFlexboxLi32Serv = document.createElement('li');
+unorderedListFlexboxLi32Serv.id = 'unordered-list-flexbox-li32-serv';
+unorderedListFlexboxLi32Serv.textContent = 'Now Serving';
+unorderedListFlexboxLi32Serv.style.listStyleType = 'none';
+unorderedListFlexboxLi32Serv.style.width = '180px';
+unorderedListFlexboxLi32Serv.style.marginBottom = '6px';
+unorderedListFlexboxLi32ServLink.appendChild(unorderedListFlexboxLi32Serv);
+
+const unorderedListFlexboxLi33HacerLink = document.createElement('a');
+unorderedListFlexboxLi33HacerLink.id = 'unordered-list-flexbox-li33-hacer-link';
+unorderedListFlexboxLi33HacerLink.href = `https://www.mcdonalds.com/us/en-us/
+community.html`;
+unorderedListFlexboxLi33HacerLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi33HacerLink.style.textDecoration = 'none';
+unorderedListFlexboxLi33HacerLink.style.listStyleType = 'none';
+unorderedListFlexboxLi33HacerLink.style.width = '180px';
+unorderedListFlexboxLi33HacerLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi33HacerLink);
+
+const unorderedListFlexboxLi33Hacer = document.createElement('li');
+unorderedListFlexboxLi33Hacer.id = 'unordered-list-flexbox-li33-hacer';
+unorderedListFlexboxLi33Hacer.textContent = 'HACER® Scholarships for Hispanic Students';
+unorderedListFlexboxLi33Hacer.style.listStyleType = 'none';
+unorderedListFlexboxLi33Hacer.style.width = '180px';
+unorderedListFlexboxLi33Hacer.style.marginBottom = '6px';
+unorderedListFlexboxLi33HacerLink.appendChild(unorderedListFlexboxLi33Hacer);
+
+const unorderedListFlexboxLi34CharLink = document.createElement('a');
+unorderedListFlexboxLi34CharLink.id = 'unordered-list-flexbox-li34-char-link';
+unorderedListFlexboxLi34CharLink.href = `https://www.mcdonalds.com/us/en-us/
+community/giving-back-with-ronald-mcdonald-house.html`;
+unorderedListFlexboxLi34CharLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi34CharLink.style.textDecoration = 'none';
+unorderedListFlexboxLi34CharLink.style.listStyleType = 'none';
+unorderedListFlexboxLi34CharLink.style.width = '180px';
+unorderedListFlexboxLi34CharLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi34CharLink);
+
+const unorderedListFlexboxLi34Char = document.createElement('li');
+unorderedListFlexboxLi34Char.id = 'unordered-list-flexbox-li34-char';
+unorderedListFlexboxLi34Char.textContent = 'Ronald McDonald House Charities';
+unorderedListFlexboxLi34Char.style.listStyleType = 'none';
+unorderedListFlexboxLi34Char.style.width = '180px';
+unorderedListFlexboxLi34Char.style.marginBottom = '6px';
+unorderedListFlexboxLi34CharLink.appendChild(unorderedListFlexboxLi34Char);
+
+const unorderedListFlexboxLi35ApaLink = document.createElement('a');
+unorderedListFlexboxLi35ApaLink.id = 'unordered-list-flexbox-li35-apa-link';
+unorderedListFlexboxLi35ApaLink.href = `https://www.mcdonalds.com/us/en-us/
+asian-pacific-americans.html`;
+unorderedListFlexboxLi35ApaLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi35ApaLink.style.textDecoration = 'none';
+unorderedListFlexboxLi35ApaLink.style.listStyleType = 'none';
+unorderedListFlexboxLi35ApaLink.style.width = '180px';
+unorderedListFlexboxLi35ApaLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi35ApaLink);
+
+const unorderedListFlexboxLi35Apa = document.createElement('li');
+unorderedListFlexboxLi35Apa.id = 'unordered-list-flexbox-li35-apa';
+unorderedListFlexboxLi35Apa.textContent = 'McDonald’s Asian Pacific American';
+unorderedListFlexboxLi35Apa.style.listStyleType = 'none';
+unorderedListFlexboxLi35Apa.style.width = '180px';
+unorderedListFlexboxLi35Apa.style.marginBottom = '6px';
+unorderedListFlexboxLi35ApaLink.appendChild(unorderedListFlexboxLi35Apa);
+
+const unorderedListFlexboxLi36IntLink = document.createElement('a');
+unorderedListFlexboxLi36IntLink.id = 'unordered-list-flexbox-li36-int-link';
+unorderedListFlexboxLi36IntLink.href = `https://corporate.mcdonalds.com/
+corpmcd.html`;
+unorderedListFlexboxLi36IntLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi36IntLink.style.textDecoration = 'none';
+unorderedListFlexboxLi36IntLink.style.listStyleType = 'none';
+unorderedListFlexboxLi36IntLink.style.width = '180px';
+unorderedListFlexboxLi36IntLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi36IntLink);
+
+const unorderedListFlexboxLi36Int = document.createElement('li');
+unorderedListFlexboxLi36Int.id = 'unordered-list-flexbox-li36-int';
+unorderedListFlexboxLi36Int.textContent = 'American McDonald\’s International';
+unorderedListFlexboxLi36Int.style.listStyleType = 'none';
+unorderedListFlexboxLi36Int.style.width = '180px';
+unorderedListFlexboxLi36Int.style.marginBottom = '6px';
+unorderedListFlexboxLi36IntLink.appendChild(unorderedListFlexboxLi36Int);
+
+const unorderedListFlexboxLi37BlackLink = document.createElement('a');
+unorderedListFlexboxLi37BlackLink.id = 'unordered-list-flexbox-li37-black-link';
+unorderedListFlexboxLi37BlackLink.href = `https://www.mcdonalds.com/us/en-us/
+black-and-positively-golden.html`;
+unorderedListFlexboxLi37BlackLink.style.color = 'rgb(41,41,41)';
+unorderedListFlexboxLi37BlackLink.style.textDecoration = 'none';
+unorderedListFlexboxLi37BlackLink.style.listStyleType = 'none';
+unorderedListFlexboxLi37BlackLink.style.width = '180px';
+unorderedListFlexboxLi37BlackLink.style.marginBottom = '6px';
+unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi37BlackLink);
+
+const unorderedListFlexboxLi37Black = document.createElement('li');
+unorderedListFlexboxLi37Black.id = 'unordered-list-flexbox-li37-black';
+unorderedListFlexboxLi37Black.textContent = 'Black and Positively Golden';
+unorderedListFlexboxLi37Black.style.listStyleType = 'none';
+unorderedListFlexboxLi37Black.style.width = '180px';
+unorderedListFlexboxLi37Black.style.marginBottom = '6px';
+unorderedListFlexboxLi37BlackLink.appendChild(unorderedListFlexboxLi37Black);
 
 const iconsFlexbox = document.createElement('section');
 iconsFlexbox.id = 'icons-flexbox';
