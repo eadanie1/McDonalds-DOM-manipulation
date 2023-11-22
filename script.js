@@ -103,7 +103,7 @@ headerTopLinksLanguageDownArrow.style.transition = 'transform 0.3s ease';
 // headerTopLinksLanguageDownArrow.classList.add('arrow-rotate');
 headerTopLinksLanguageDownArrow.addEventListener('click', function() {
     event.preventDefault();
-    headerTopLinksLanguageDownArrow.classList.toggle('arrow-rotate')
+    headerTopLinksLanguageDownArrow.classList.toggle('arrow-rotate');
 });
 headerTopLinksLanguage.appendChild(headerTopLinksLanguageDownArrow);
 
