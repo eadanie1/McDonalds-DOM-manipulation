@@ -358,100 +358,43 @@ downArrowLargeIcon.style.marginLeft = '5px';
 downArrowLargeIcon.style.width = '12px';
 bottomHeaderLinksContainerLiMenu.appendChild(downArrowLargeIcon);
 
-const bottomHeaderLinksContainerLiApp = document.createElement('li');
-bottomHeaderLinksContainerLiApp.id = 'bottom-header-links-container-li-app';
-bottomHeaderLinksContainerLiApp.style.display = 'inline';
-bottomHeaderLinksContainerLiApp.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiApp);
+function createLinkListItem(id, href, textContent, parent) {
+    const listItem = document.createElement('li');
+    listItem.id = id;
+    listItem.style.display = 'inline';
+    listItem.style.margin = '0 25px 0 0';
 
-const bottomHeaderLinksContainerLiAppLink = document.createElement('a');
-bottomHeaderLinksContainerLiAppLink.id = 'bottom-header-links-container-li-app-link';
-bottomHeaderLinksContainerLiAppLink.href = `https://www.mcdonalds.com/us/
-en-us/download-app.html`;
-bottomHeaderLinksContainerLiAppLink.textContent = 'Download App';
-bottomHeaderLinksContainerLiAppLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiAppLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiAppLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiApp.appendChild(bottomHeaderLinksContainerLiAppLink);
+    const link = document.createElement('a');
+    link.id = `${id}-link`;
+    link.href = href;
+    link.textContent = textContent;
+    link.style.listStyleType = 'none';
+    link.style.color = 'rgb(41,41,41)';
+    link.style.textDecoration = 'none';
 
-const bottomHeaderLinksContainerLiRew = document.createElement('li');
-bottomHeaderLinksContainerLiRew.id = 'bottom-header-links-container-li-rew';
-bottomHeaderLinksContainerLiRew.style.display = 'inline';
-bottomHeaderLinksContainerLiRew.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiRew);
+    listItem.appendChild(link);
+    parent.appendChild(listItem);
+}
 
-const bottomHeaderLinksContainerLiRewLink = document.createElement('a');
-bottomHeaderLinksContainerLiRewLink.id = 'bottom-header-links-container-li-rew-link';
-bottomHeaderLinksContainerLiRewLink.href = `https://www.mcdonalds.com/us/
-en-us/mymcdonalds.html`;
-bottomHeaderLinksContainerLiRewLink.textContent = 'MyMcDonald\'s rewards';
-bottomHeaderLinksContainerLiRewLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiRewLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiRewLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiRew.appendChild(bottomHeaderLinksContainerLiRewLink);
+// FUNCTION TO DUPLICATE LIST ITEMS/ANCHOR ELEMENTS
 
-const bottomHeaderLinksContainerLiDeal = document.createElement('li');
-bottomHeaderLinksContainerLiDeal.id = 'bottom-header-links-container-li-deal';
-bottomHeaderLinksContainerLiDeal.style.display = 'inline';
-bottomHeaderLinksContainerLiDeal.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiDeal);
+createLinkListItem('bottom-header-links-container-li-app', `https://www.mcdonalds.com/us/
+// en-us/download-app.html`, 'Download App', bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLiDealLink = document.createElement('a');
-bottomHeaderLinksContainerLiDealLink.id = 'bottom-header-links-container-li-deal-link';
-bottomHeaderLinksContainerLiDealLink.href = `https://www.mcdonalds.com/us/en-us/deals.html`;
-bottomHeaderLinksContainerLiDealLink.textContent = 'Excusive Deals';
-bottomHeaderLinksContainerLiDealLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiDealLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiDealLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiDeal.appendChild(bottomHeaderLinksContainerLiDealLink);
+createLinkListItem('bottom-header-links-container-li-rew', `https://www.mcdonalds.com/us/
+// en-us/mymcdonalds.html`, 'MyMcDonald\'s rewards', bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLiFood = document.createElement('li');
-bottomHeaderLinksContainerLiFood.id = 'bottom-header-links-container-li-food';
-bottomHeaderLinksContainerLiFood.style.display = 'inline';
-bottomHeaderLinksContainerLiFood.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiFood);
+createLinkListItem('bottom-header-links-container-li-deal', `https://www.mcdonalds.com/us/
+en-us/deals.html`, 'Excusive Deals', bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLiFoodLink = document.createElement('a');
-bottomHeaderLinksContainerLiFoodLink.id = 'bottom-header-links-container-li-food-link';
-bottomHeaderLinksContainerLiFoodLink.href = `https://www.mcdonalds.com/us/en-us/about-
-our-food.html`;
-bottomHeaderLinksContainerLiFoodLink.textContent = 'About Our Food';
-bottomHeaderLinksContainerLiFoodLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiFoodLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiFoodLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiFood.appendChild(bottomHeaderLinksContainerLiFoodLink);
+createLinkListItem('bottom-header-links-container-li-food', `https://www.mcdonalds.com/us/
+en-us/about-our-food.html`, 'About Our Food', bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLiLocate = document.createElement('li');
-bottomHeaderLinksContainerLiLocate.id = 'bottom-header-links-container-li-locate';
-bottomHeaderLinksContainerLiLocate.style.display = 'inline';
-bottomHeaderLinksContainerLiLocate.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiLocate);
+createLinkListItem('bottom-header-links-container-li-locate', `https://www.mcdonalds.com/us/
+en-us/restaurant-locator.html`, 'Locate', bottomHeaderLinksContainerUl);
 
-const bottomHeaderLinksContainerLiLocateLink = document.createElement('a');
-bottomHeaderLinksContainerLiLocateLink.id = 'bottom-header-links-container-li-locate-link';
-bottomHeaderLinksContainerLiLocateLink.href = `https://www.mcdonalds.com/us/en-us/restaurant
--locator.html`;
-bottomHeaderLinksContainerLiLocateLink.textContent = 'Locate';
-bottomHeaderLinksContainerLiLocateLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiLocateLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiLocateLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiLocate.appendChild(bottomHeaderLinksContainerLiLocateLink);
-
-const bottomHeaderLinksContainerLiGift = document.createElement('li');
-bottomHeaderLinksContainerLiGift.id = 'bottom-header-links-container-li-gift';
-bottomHeaderLinksContainerLiGift.style.display = 'inline';
-bottomHeaderLinksContainerLiGift.style.margin = '0 25px 0 0';
-bottomHeaderLinksContainerUl.appendChild(bottomHeaderLinksContainerLiGift);
-
-const bottomHeaderLinksContainerLiGiftLink = document.createElement('a');
-bottomHeaderLinksContainerLiGiftLink.id = 'bottom-header-links-container-li-gift-link';
-bottomHeaderLinksContainerLiGiftLink.href = `https://www.mcdonalds.com/us/en-us/
-arch-card.html`;
-bottomHeaderLinksContainerLiGiftLink.textContent = 'Gift Cards';
-bottomHeaderLinksContainerLiGiftLink.style.listStyleType = 'none';
-bottomHeaderLinksContainerLiGiftLink.style.color = 'rgb(41,41,41)';
-bottomHeaderLinksContainerLiGiftLink.style.textDecoration = 'none';
-bottomHeaderLinksContainerLiGift.appendChild(bottomHeaderLinksContainerLiGiftLink);
+createLinkListItem('bottom-header-links-container-li-gift', `https://www.mcdonalds.com/us/
+en-us/arch-card.html`, 'Gift Cards', bottomHeaderLinksContainerUl);
 
 // MAIN CONTAINER AND MAIN CONTENT CONTAINER
 
