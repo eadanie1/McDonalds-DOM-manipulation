@@ -5,7 +5,6 @@ document.body.style.margin = '0';
 document.body.style.fontFamily = `system-ui, -apple-system, 
 BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 
 Open Sans, Helvetica Neue, sans-serif`;
-// Note: template literal used above to line break code for easy overview
 document.body.style.fontSize = '16px';
 document.body.style.color = 'rgb(41,41,41)';
 document.body.style.lineHeight = '22px';
@@ -965,25 +964,30 @@ footerSubDiv.appendChild(footerUl);
 
 // FUNCTION FOR LIST ITEM/ANCHORS IN FOOTER
 
-// function createListItemLink2() {
+function createListItemLink2(id, href, textContent, parent) {
+    const link = document.createElement('a');
 
-// }
+    link.id = `${id}-link`;
+    link.href = href;
 
-const footerLi1Link = document.createElement('a');
-footerLi1Link.id = 'footer-li1-link';
-footerLi1Link.href = `https://www.mcdonalds.com/us/
-en-us/privacy-overview.html`;
-footerUl.appendChild(footerLi1Link);
+    const listItem = document.createElement('li');
 
-const footerLi1 = document.createElement('li');
-footerLi1.id = 'footer-li1';
-footerLi1.textContent = 'Privacy (Updated)';
-footerLi1.style.color = 'rgb(41,41,41)';
-footerLi1.style.display = 'inline-block';
-footerLi1.style.listStyleType = 'none';
-footerLi1.style.padding = '0 40px 0 0';
-footerLi1.style.height = '44px';
-footerLi1Link.appendChild(footerLi1);
+    listItem.id = id;
+    listItem.textContent = textContent;
+    listItem.style.color = 'rgb(41,41,41)';
+    listItem.style.display = 'inline-block';
+    listItem.style.listStyleType = 'none';
+    listItem.style.padding = '0 40px 0 0';
+    listItem.style.height = '44px';
+
+    link.appendChild(listItem);
+    parent.appendChild(link);
+}
+
+createListItemLink2('footer-li1', `https://www.mcdonalds.com/us/
+en-us/privacy-overview.html`, 'Privacy (Updated)', footerUl);
+
+
 
 const footerLi2Link = document.createElement('a');
 footerLi2Link.id = 'footer-li2-link';
