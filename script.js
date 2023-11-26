@@ -776,47 +776,13 @@ createListItemLink('unordered-list-flexbox-li36-int', `https://corporate.mcdonal
 corpmcd.html`, 'McDonald\’s International', 
 unorderedListFlexboxUl3);
 
+createListItemLink('unordered-list-flexbox-li37-black', `https://www.mcdonalds.com/us/
+en-us/black-and-positively-golden.html`, 'Black and Positively Golden', 
+unorderedListFlexboxUl3);
 
-
-
-
-const unorderedListFlexboxLi37BlackLink = document.createElement('a');
-unorderedListFlexboxLi37BlackLink.id = 'unordered-list-flexbox-li37-black-link';
-unorderedListFlexboxLi37BlackLink.href = `https://www.mcdonalds.com/us/en-us/
-black-and-positively-golden.html`;
-unorderedListFlexboxLi37BlackLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi37BlackLink.style.textDecoration = 'none';
-unorderedListFlexboxLi37BlackLink.style.listStyleType = 'none';
-unorderedListFlexboxLi37BlackLink.style.width = '180px';
-unorderedListFlexboxLi37BlackLink.style.marginBottom = '6px';
-unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi37BlackLink);
-
-const unorderedListFlexboxLi37Black = document.createElement('li');
-unorderedListFlexboxLi37Black.id = 'unordered-list-flexbox-li37-black';
-unorderedListFlexboxLi37Black.textContent = 'Black and Positively Golden';
-unorderedListFlexboxLi37Black.style.listStyleType = 'none';
-unorderedListFlexboxLi37Black.style.width = '180px';
-unorderedListFlexboxLi37Black.style.marginBottom = '6px';
-unorderedListFlexboxLi37BlackLink.appendChild(unorderedListFlexboxLi37Black);
-
-const unorderedListFlexboxLi38LgLink = document.createElement('a');
-unorderedListFlexboxLi38LgLink.id = 'unordered-list-flexbox-li38-lg-link';
-unorderedListFlexboxLi38LgLink.href = `https://www.mcdonalds.com/us/en-us/
-community/lgbtq-plus.html`;
-unorderedListFlexboxLi38LgLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi38LgLink.style.textDecoration = 'none';
-unorderedListFlexboxLi38LgLink.style.listStyleType = 'none';
-unorderedListFlexboxLi38LgLink.style.width = '180px';
-unorderedListFlexboxLi38LgLink.style.marginBottom = '6px';
-unorderedListFlexboxUl3.appendChild(unorderedListFlexboxLi38LgLink);
-
-const unorderedListFlexboxLi38Lg = document.createElement('li');
-unorderedListFlexboxLi38Lg.id = 'unordered-list-flexbox-li38-lg';
-unorderedListFlexboxLi38Lg.textContent = 'McDonald’s LGBTQ+';
-unorderedListFlexboxLi38Lg.style.listStyleType = 'none';
-unorderedListFlexboxLi38Lg.style.width = '180px';
-unorderedListFlexboxLi38Lg.style.marginBottom = '6px';
-unorderedListFlexboxLi38LgLink.appendChild(unorderedListFlexboxLi38Lg);
+createListItemLink('unordered-list-flexbox-li38-lg', `https://www.mcdonalds.com/us/
+en-us/community/lgbtq-plus.html`, 'McDonald’s LGBTQ+', 
+unorderedListFlexboxUl3);
 
 // UNORDERED LIST NO 4: CONTACT US
 
@@ -836,119 +802,31 @@ unorderedListFlexboxUl4.id = 'unordered-list-flexbox-ul4';
 unorderedListFlexboxUl4.style.padding = '0';
 unorderedListFlexboxSubDiv4.appendChild(unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi41ContactLink = document.createElement('a');
-unorderedListFlexboxLi41ContactLink.id = 'unordered-list-flexbox-li41-contact-link';
-unorderedListFlexboxLi41ContactLink.href = `https://www.mcdonalds.com/us/
-en-us/contact-us.html`;
-unorderedListFlexboxLi41ContactLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi41ContactLink.style.textDecoration = 'none';
-unorderedListFlexboxLi41ContactLink.style.listStyleType = 'none';
-unorderedListFlexboxLi41ContactLink.style.width = '180px';
-unorderedListFlexboxLi41ContactLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi41ContactLink);
+createListItemLink('unordered-list-flexbox-li41-contact', `https://www.mcdonalds.com/us/
+en-us/contact-us.html`, 'Contact Us Overview', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi41Contact = document.createElement('li');
-unorderedListFlexboxLi41Contact.id = 'unordered-list-flexbox-li41-contact';
-unorderedListFlexboxLi41Contact.textContent = 'Contact Us Overview';
-unorderedListFlexboxLi41Contact.style.listStyleType = 'none';
-unorderedListFlexboxLi41Contact.style.width = '180px';
-unorderedListFlexboxLi41Contact.style.marginBottom = '6px';
-unorderedListFlexboxLi41ContactLink.appendChild(unorderedListFlexboxLi41Contact);
+createListItemLink('unordered-list-flexbox-li42-gift', `https://www.mcdonalds.com/us/
+en-us/faq/arch-card.html`, 'Gift Card FAQs', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi42GiftLink = document.createElement('a');
-unorderedListFlexboxLi42GiftLink.id = 'unordered-list-flexbox-li42-gift-link';
-unorderedListFlexboxLi42GiftLink.href = `https://www.mcdonalds.com/us/
-en-us/faq/arch-card.html`;
-unorderedListFlexboxLi42GiftLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi42GiftLink.style.textDecoration = 'none';
-unorderedListFlexboxLi42GiftLink.style.listStyleType = 'none';
-unorderedListFlexboxLi42GiftLink.style.width = '180px';
-unorderedListFlexboxLi42GiftLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi42GiftLink);
+createListItemLink('unordered-list-flexbox-li43-donations', `https://www.mcdonalds.com/us/
+en-us/faq/business.html#donation`, 'Donations', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi42Gift = document.createElement('li');
-unorderedListFlexboxLi42Gift.id = 'unordered-list-flexbox-li42-gift';
-unorderedListFlexboxLi42Gift.textContent = 'Gift Card FAQs';
-unorderedListFlexboxLi42Gift.style.listStyleType = 'none';
-unorderedListFlexboxLi42Gift.style.width = '180px';
-unorderedListFlexboxLi42Gift.style.marginBottom = '6px';
-unorderedListFlexboxLi42GiftLink.appendChild(unorderedListFlexboxLi42Gift);
+createListItemLink('unordered-list-flexbox-li44-employ', `https://www.mcdonalds.com/us/en-us/
+faq/employment.html`, 'Employment', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi43DonationsLink = document.createElement('a');
-unorderedListFlexboxLi43DonationsLink.id = 'unordered-list-flexbox-li43-donations-link';
-unorderedListFlexboxLi43DonationsLink.href = `https://www.mcdonalds.com/us/en-us/faq/
-business.html#donation`;
-unorderedListFlexboxLi43DonationsLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi43DonationsLink.style.textDecoration = 'none';
-unorderedListFlexboxLi43DonationsLink.style.listStyleType = 'none';
-unorderedListFlexboxLi43DonationsLink.style.width = '180px';
-unorderedListFlexboxLi43DonationsLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi43DonationsLink);
+createListItemLink('unordered-list-flexbox-li45-feedback', `https://www.mcdonalds.com/us/
+en-us/feedback.html`, 'Customer Feedback', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi43Donations = document.createElement('li');
-unorderedListFlexboxLi43Donations.id = 'unordered-list-flexbox-li43-donations';
-unorderedListFlexboxLi43Donations.textContent = 'Donations';
-unorderedListFlexboxLi43Donations.style.listStyleType = 'none';
-unorderedListFlexboxLi43Donations.style.width = '180px';
-unorderedListFlexboxLi43Donations.style.marginBottom = '6px';
-unorderedListFlexboxLi43DonationsLink.appendChild(unorderedListFlexboxLi43Donations);
+createListItemLink('unordered-list-flexbox-li46-faq', `https://www.mcdonalds.com/us/
+en-us/faq.html`, 'Frequently Asked Questions', 
+unorderedListFlexboxUl4);
 
-const unorderedListFlexboxLi44EmployLink = document.createElement('a');
-unorderedListFlexboxLi44EmployLink.id = 'unordered-list-flexbox-li44-employ-link';
-unorderedListFlexboxLi44EmployLink.href = `https://www.mcdonalds.com/us/en-us/faq/
-employment.html`;
-unorderedListFlexboxLi44EmployLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi44EmployLink.style.textDecoration = 'none';
-unorderedListFlexboxLi44EmployLink.style.listStyleType = 'none';
-unorderedListFlexboxLi44EmployLink.style.width = '180px';
-unorderedListFlexboxLi44EmployLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi44EmployLink);
-
-const unorderedListFlexboxLi44Employ = document.createElement('li');
-unorderedListFlexboxLi44Employ.id = 'unordered-list-flexbox-li44-employ';
-unorderedListFlexboxLi44Employ.textContent = 'Employment';
-unorderedListFlexboxLi44Employ.style.listStyleType = 'none';
-unorderedListFlexboxLi44Employ.style.width = '180px';
-unorderedListFlexboxLi44Employ.style.marginBottom = '6px';
-unorderedListFlexboxLi44EmployLink.appendChild(unorderedListFlexboxLi44Employ);
-
-const unorderedListFlexboxLi45feedbackLink = document.createElement('a');
-unorderedListFlexboxLi45feedbackLink.id = 'unordered-list-flexbox-li45-feedback-link';
-unorderedListFlexboxLi45feedbackLink.href = `https://www.mcdonalds.com/us/
-en-us/feedback.html`;
-unorderedListFlexboxLi45feedbackLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi45feedbackLink.style.textDecoration = 'none';
-unorderedListFlexboxLi45feedbackLink.style.listStyleType = 'none';
-unorderedListFlexboxLi45feedbackLink.style.width = '180px';
-unorderedListFlexboxLi45feedbackLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi45feedbackLink);
-
-const unorderedListFlexboxLi45feedback = document.createElement('li');
-unorderedListFlexboxLi45feedback.id = 'unordered-list-flexbox-li45-feedback';
-unorderedListFlexboxLi45feedback.textContent = 'Customer Feedback';
-unorderedListFlexboxLi45feedback.style.listStyleType = 'none';
-unorderedListFlexboxLi45feedback.style.width = '180px';
-unorderedListFlexboxLi45feedback.style.marginBottom = '6px';
-unorderedListFlexboxLi45feedbackLink.appendChild(unorderedListFlexboxLi45feedback);
-
-const unorderedListFlexboxLi46FaqLink = document.createElement('a');
-unorderedListFlexboxLi46FaqLink.id = 'unordered-list-flexbox-li46-faq-link';
-unorderedListFlexboxLi46FaqLink.href = `https://www.mcdonalds.com/us/
-en-us/faq.html`;
-unorderedListFlexboxLi46FaqLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi46FaqLink.style.textDecoration = 'none';
-unorderedListFlexboxLi46FaqLink.style.listStyleType = 'none';
-unorderedListFlexboxLi46FaqLink.style.width = '180px';
-unorderedListFlexboxLi46FaqLink.style.marginBottom = '6px';
-unorderedListFlexboxUl4.appendChild(unorderedListFlexboxLi46FaqLink);
-
-const unorderedListFlexboxLi46Faq = document.createElement('li');
-unorderedListFlexboxLi46Faq.id = 'unordered-list-flexbox-li46-faq';
-unorderedListFlexboxLi46Faq.textContent = 'Frequently Asked Questions';
-unorderedListFlexboxLi46Faq.style.listStyleType = 'none';
-unorderedListFlexboxLi46Faq.style.width = '180px';
-unorderedListFlexboxLi46Faq.style.marginBottom = '6px';
-unorderedListFlexboxLi46FaqLink.appendChild(unorderedListFlexboxLi46Faq);
+// SOCIAL MEDIA ICONS AND APP ICONS
 
 const iconsFlexbox = document.createElement('section');
 iconsFlexbox.id = 'icons-flexbox';
@@ -1084,6 +962,12 @@ footerUl.id = 'footer-ul';
 footerUl.style.padding = '0';
 footerUl.style.display = 'inline';
 footerSubDiv.appendChild(footerUl);
+
+// FUNCTION FOR LIST ITEM/ANCHORS IN FOOTER
+
+// function createListItemLink2() {
+
+// }
 
 const footerLi1Link = document.createElement('a');
 footerLi1Link.id = 'footer-li1-link';
