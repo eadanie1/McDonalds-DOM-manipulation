@@ -987,88 +987,21 @@ function createListItemLink2(id, href, textContent, parent) {
 createListItemLink2('footer-li1', `https://www.mcdonalds.com/us/
 en-us/privacy-overview.html`, 'Privacy (Updated)', footerUl);
 
+createListItemLink2('footer-li2', `https://www.mcdonalds.com/
+us/en-us/california-privacy-notice.html`, 'California Privacy Notice', footerUl);
 
+createListItemLink2('footer-li3', `https://www.mcdonalds.com/
+us/en-us/terms-and-conditions.html`, 'Terms & Conditions', footerUl);
 
-const footerLi2Link = document.createElement('a');
-footerLi2Link.id = 'footer-li2-link';
-footerLi2Link.href = `https://www.mcdonalds.com/
-us/en-us/california-privacy-notice.html`;
-footerUl.appendChild(footerLi2Link);
+createListItemLink2('footer-li4', `https://www.mcdonalds.com/
+us/en-us/accessibility.html`, 'Accessibility', footerUl);
 
-const footerLi2 = document.createElement('li');
-footerLi2.id = 'footer-li2';
-footerLi2.textContent = 'California Privacy Notice';
-footerLi2.style.color = 'rgb(41,41,41)';
-footerLi2.style.display = 'inline-block';
-footerLi2.style.listStyleType = 'none';
-footerLi2.style.padding = '0 40px 0 0';
-footerLi2.style.height = '44px';
-footerLi2Link.appendChild(footerLi2);
+createListItemLink2('footer-li5', `https://www.mcdonalds.com/us/
+en-us/privacy/do-not-sell-my-personal-information.html`, `Do Not Sell or Share My 
+Personal Information`, footerUl);
 
-const footerLi3Link = document.createElement('a');
-footerLi3Link.id = 'footer-li3-link';
-footerLi3Link.href = `https://www.mcdonalds.com/
-us/en-us/terms-and-conditions.html`;
-footerUl.appendChild(footerLi3Link);
-
-const footerLi3 = document.createElement('li');
-footerLi3.id = 'footer-li3';
-footerLi3.textContent = 'Terms & Conditions';
-footerLi3.style.color = 'rgb(41,41,41)';
-footerLi3.style.display = 'inline-block';
-footerLi3.style.listStyleType = 'none';
-footerLi3.style.padding = '0 40px 0 0';
-footerLi3.style.height = '44px';
-footerLi3Link.appendChild(footerLi3);
-
-const footerLi4Link = document.createElement('a');
-footerLi4Link.id = 'footer-li4-link';
-footerLi4Link.href = `https://www.mcdonalds.com/
-us/en-us/accessibility.html`;
-footerUl.appendChild(footerLi4Link);
-
-const footerLi4 = document.createElement('li');
-footerLi4.id = 'footer-li4';
-footerLi4.textContent = 'Accessibility';
-footerLi4.style.color = 'rgb(41,41,41)';
-footerLi4.style.display = 'inline-block';
-footerLi4.style.listStyleType = 'none';
-footerLi4.style.padding = '0 40px 0 0';
-footerLi4.style.height = '44px';
-footerLi4Link.appendChild(footerLi4);
-
-const footerLi5Link = document.createElement('a');
-footerLi5Link.id = 'footer-li5-link';
-footerLi5Link.href = `https://www.mcdonalds.com/us/
-en-us/privacy/do-not-sell-my-personal-information.html`;
-footerUl.appendChild(footerLi5Link);
-
-const footerLi5 = document.createElement('li');
-footerLi5.id = 'footer-li5';
-footerLi5.textContent = `Do Not Sell or Share My 
-Personal Information`;
-footerLi5.style.color = 'rgb(41,41,41)';
-footerLi5.style.display = 'inline-block';
-footerLi5.style.listStyleType = 'none';
-footerLi5.style.padding = '0 40px 0 0';
-footerLi5.style.height = '44px';
-footerLi5Link.appendChild(footerLi5);
-
-const footerLi6Link = document.createElement('a');
-footerLi6Link.id = 'footer-li6-link';
-footerLi6Link.href = `https://www.mcdonalds.com/us/
-en-us/about-our-food/meet-our-food-experts.html#`;
-footerUl.appendChild(footerLi6Link);
-
-const footerLi6 = document.createElement('li');
-footerLi6.id = 'footer-li6';
-footerLi6.textContent = `Cookies Settings`;
-footerLi6.style.color = 'rgb(41,41,41)';
-footerLi6.style.display = 'inline-block';
-footerLi6.style.listStyleType = 'none';
-footerLi6.style.padding = '0 40px 0 0';
-footerLi6.style.height = '44px';
-footerLi6Link.appendChild(footerLi6);
+createListItemLink2('footer-li6', `https://www.mcdonalds.com/us/
+en-us/about-our-food/meet-our-food-experts.html#`, `Cookies Settings`, footerUl);
 
 const nestedFlexbox = document.createElement('div');
 nestedFlexbox.id = 'nested-flexbox';
@@ -1100,6 +1033,3 @@ copyrightText.style.textAlign = 'right';
 copyrightText.style.padding = '12px 0 0 44px';
 copyrightText.style.width = '280px';
 nestedFlexboxSubDiv2.appendChild(copyrightText);
-
-// NO MEDIA QUERIES DONE AS THESE ARE DONE ENTIRELY IN
-// CSS AS PER CHAT GPT
