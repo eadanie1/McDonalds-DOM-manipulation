@@ -358,6 +358,8 @@ downArrowLargeIcon.style.marginLeft = '5px';
 downArrowLargeIcon.style.width = '12px';
 bottomHeaderLinksContainerLiMenu.appendChild(downArrowLargeIcon);
 
+// FUNCTION TO DUPLICATE LIST ITEMS/ANCHOR ELEMENTS
+
 function createLinkListItem(id, href, textContent, parent) {
     const listItem = document.createElement('li');
     listItem.id = id;
@@ -375,8 +377,6 @@ function createLinkListItem(id, href, textContent, parent) {
     listItem.appendChild(link);
     parent.appendChild(listItem);
 }
-
-// FUNCTION TO DUPLICATE LIST ITEMS/ANCHOR ELEMENTS
 
 createLinkListItem('bottom-header-links-container-li-app', `https://www.mcdonalds.com/us/
 // en-us/download-app.html`, 'Download App', bottomHeaderLinksContainerUl);
@@ -636,24 +636,33 @@ unorderedListFlexboxUl1.id = 'unordered-list-flexbox-ul1';
 unorderedListFlexboxUl1.style.padding = '0';
 unorderedListFlexboxSubDiv1.appendChild(unorderedListFlexboxUl1);
 
-const unorderedListFlexboxLi1AboutLink = document.createElement('a');
-unorderedListFlexboxLi1AboutLink.id = 'unordered-list-flexbox-li1-about-link';
-unorderedListFlexboxLi1AboutLink.href = `https://www.mcdonalds.com/us/en-us/
-about-us.html`;
-unorderedListFlexboxLi1AboutLink.style.color = 'rgb(41,41,41)';
-unorderedListFlexboxLi1AboutLink.style.textDecoration = 'none';
-unorderedListFlexboxLi1AboutLink.style.listStyleType = 'none';
-unorderedListFlexboxLi1AboutLink.style.width = '180px';
-unorderedListFlexboxLi1AboutLink.style.marginBottom = '6px';
-unorderedListFlexboxUl1.appendChild(unorderedListFlexboxLi1AboutLink);
+// FUNCTION TO PRODUCE ANCHOR/NESTED LIST ISTEM ELEMENTS
 
-const unorderedListFlexboxLi1About = document.createElement('li');
-unorderedListFlexboxLi1About.id = 'unordered-list-flexbox-li1-about';
-unorderedListFlexboxLi1About.textContent = 'About Us Overview';
-unorderedListFlexboxLi1About.style.listStyleType = 'none';
-unorderedListFlexboxLi1About.style.width = '180px';
-unorderedListFlexboxLi1About.style.marginBottom = '6px';
-unorderedListFlexboxLi1AboutLink.appendChild(unorderedListFlexboxLi1About);
+function createListItemLink(id, href, textContent, parent) {
+    const link = document.createElement('a');
+
+    link.id = `${id}`-link;
+    link.href = href;
+    link.style.color = 'rgb(41,41,41)';
+    link.style.textDecoration = 'none';
+    link.style.listStyleType = 'none';
+    link.style.width = '180px';
+    link.style.marginBottom = '6px';
+
+    const listItem = document.createElement('li');
+
+    listItem.id = id;
+    listItem.textContent = textContent;
+    listItem.style.listStyleType = 'none';
+    listItem.style.width = '180px';
+    listItem.style.marginBottom = '6px';
+
+    link.appendChild(listItem);
+    parent.appendChild(link);
+}
+
+createListItemLink('unordered-list-flexbox-li1-about', `https://www.mcdonalds.com/us/
+en-us/about-us.html`, 'About Us Overview', unorderedListFlexboxUl1);
 
 const unorderedListFlexboxLi2TeamLink = document.createElement('a');
 unorderedListFlexboxLi2TeamLink.id = 'unordered-list-flexbox-li2-team-link';
