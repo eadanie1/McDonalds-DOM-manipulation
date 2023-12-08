@@ -26,6 +26,8 @@ allButtons.forEach(button => {
 
 // HEADER CONTAINER AND HEADER
 
+// STILL NEED TO REFACTOR CERTAIN CODE BLOCKS
+
 const header = document.createElement('header');
 header.id = 'header-container';
 header.style.height = '118px';
