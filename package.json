@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "mcdonalds-dom-manipulation",
+  "version": "1.0.0",
+  "description": "Welcome to my McDonald's website clone project, using JavaScript to manipulate the docmuent object.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
