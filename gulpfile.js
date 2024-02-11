@@ -1,10 +1,11 @@
 
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
-import sassPackage from 'sass';
+import * as sassPackage from 'sass';
 import gulpSass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
-import uglify from 'gulp-uglify';
+import uglify from 'gulp-terser'; /* had to change from uglify to 
+terser as ES6 not supported in uglify */
 import imagemin from 'gulp-imagemin';
 import merge from 'merge-stream';
 
@@ -17,7 +18,7 @@ export function minifyHTML() {
 }
 
 export function compileSass() {
-  return gulp.src('src/styles/main.scss')
+  return gulp.src('src/styles/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('src/css'))
 }
