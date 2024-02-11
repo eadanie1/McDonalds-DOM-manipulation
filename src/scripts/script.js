@@ -96,32 +96,29 @@ headerTopLinksLanguageDownArrow.src = 'icons/downarrow.png';
 headerTopLinksLanguageDownArrow.style.marginLeft = '5px';
 headerTopLinksLanguageDownArrow.style.width = '9px';
 headerTopLinksLanguageDownArrow.style.transition = 'transform 0.3s ease';
-// headerTopLinksLanguageDownArrow.classList.add('arrow-rotate');
 headerTopLinksLanguageDownArrow.addEventListener('click', function() {
     event.preventDefault();
     headerTopLinksLanguageDownArrow.classList.toggle('arrow-rotate');
 });
 headerTopLinksLanguage.appendChild(headerTopLinksLanguageDownArrow);
 
-const headerTopLinksEmail = document.createElement('a');
-headerTopLinksEmail.id = 'header__top-links-email';
-headerTopLinksEmail.href = `https://www.mcdonalds.com/us/en-us/mcdonalds-
-email-signup.html`;
-headerTopLinksEmail.textContent = 'Sign Up for Email';
-headerTopLinksEmail.style.color = primaryColor;
-headerTopLinksEmail.style.textDecoration = 'none';
-headerTopLinksEmail.style.margin = '0 30px 0 0';
-topLeftHeaderLinksContainer.appendChild(headerTopLinksEmail);
+function createTopLeftHeaderLinkElement(id, href, textContent, parent) {
+    const linkElement = document.createElement('a');
 
-const headerTopLinksCareers = document.createElement('a');
-headerTopLinksCareers.id = 'header__top-links-careers';
-headerTopLinksCareers.href = `https://www.mcdonalds.com/us/en-us/
-mcdonalds-careers.html`;
-headerTopLinksCareers.textContent = 'Careers';
-headerTopLinksCareers.style.color = primaryColor;
-headerTopLinksCareers.style.textDecoration = 'none';
-headerTopLinksCareers.style.margin = '0 30px 0 0';
-topLeftHeaderLinksContainer.appendChild(headerTopLinksCareers);
+    linkElement.id = id;
+    linkElement.href = href;
+    linkElement.textContent = textContent;
+    linkElement.style.color = primaryColor;
+    linkElement.style.textDecoration = 'none';
+    linkElement.style.margin = '0 30px 0 0';
+    parent.appendChild(linkElement);
+}
+
+createTopLeftHeaderLinkElement('header__top-links-email', `https://www.mcdonalds.com/us/en-us/mcdonalds-
+email-signup.html`, 'Sign Up for Email', topLeftHeaderLinksContainer);
+
+createTopLeftHeaderLinkElement('header__top-links-careers', `https://www.mcdonalds.com/us/en-us/
+mcdonalds-careers.html`, 'Careers', topLeftHeaderLinksContainer);
 
 const topRightHeaderLinksContainer = document.createElement('div');
 topRightHeaderLinksContainer.id = 'header__top-right-links-container';
