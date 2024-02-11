@@ -1,6 +1,5 @@
 
 // GENERAL: BODY
-
 const primaryFontProperties = `16px/22px system-ui, -apple-system, 
 BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 
 Open Sans, Helvetica Neue, sans-serif`;
@@ -66,7 +65,6 @@ headerMainLinksContainer.style.justifyContent = 'space-between';
 headerContainer.appendChild(headerMainLinksContainer);
 
 // HEADER TOP LINKS CONTAINER
-
 const topHeaderLinksContainer = document.createElement('div');
 topHeaderLinksContainer.id = 'header__top-links-container';
 topHeaderLinksContainer.style.display = 'flex';
@@ -190,7 +188,6 @@ orderNowButton.style.cursor = 'pointer';
 topRightHeaderLinksContainer.appendChild(orderNowButton);
 
 // HEADER BOTTOM LINKS CONTAINER
-
 const bottomHeaderLinksContainer = document.createElement('div');
 bottomHeaderLinksContainer.id = 'header__bottom-links-container';
 bottomHeaderLinksContainer.style.display = 'flex';
@@ -219,7 +216,6 @@ downArrowLargeIcon.style.width = '12px';
 bottomHeaderLinksContainerLiMenu.appendChild(downArrowLargeIcon);
 
 // FUNCTION TO DUPLICATE LIST ITEMS/ANCHOR ELEMENTS
-
 function createLinkListItem(id, href, textContent, parent) {
     const listItem = document.createElement('li');
     listItem.id = id;
@@ -257,7 +253,6 @@ createLinkListItem('bottom-header-links-container-li-gift', `https://www.mcdonal
 en-us/arch-card.html`, 'Gift Cards', bottomHeaderLinksContainerUl);
 
 // MAIN CONTAINER AND MAIN CONTENT CONTAINER
-
 const mainFlexboxContainer = document.createElement('div');
 mainFlexboxContainer.id = 'main-flexbox-container';
 mainFlexboxContainer.style.display = 'flex';
@@ -306,40 +301,12 @@ the food you eat and bring innovation into our kitchens.`;
 mainContentContainer.appendChild(expertsInfoText);
 
 // TRIPLE GRID CONTAINER
-
 const tripleGridContainer = document.createElement('section');
 tripleGridContainer.id = 'main-content-container__triple-grid-container';
 tripleGridContainer.style.display = 'grid';
 tripleGridContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
 tripleGridContainer.style.columnGap = '23px';
 mainContentContainer.appendChild(tripleGridContainer);
-
-const tripleGridSubDiv1 = document.createElement('div');
-tripleGridSubDiv1.id = 'main-content-container__triple-grid-sub-div1';
-tripleGridContainer.appendChild(tripleGridSubDiv1);
-
-const gridImage1 = document.createElement('img');
-gridImage1.id = 'main-content-container__grid-image';
-gridImage1.src = 'images/Our_Chefs_3col_760x508_3-column-desktop.jpeg';
-gridImage1.alt = 'food-experts-main-image';
-gridImage1.style.width = '100%';
-tripleGridSubDiv1.appendChild(gridImage1);
-
-const gridTitle1 = document.createElement('div');
-gridTitle1.id = 'main-content-container__grid-title';
-gridTitle1.textContent = 'Our Chefs';
-gridTitle1.style.fontSize = '36px';
-gridTitle1.style.fontWeight = '700';
-gridTitle1.style.padding = '45px 0 18px 0';
-tripleGridSubDiv1.appendChild(gridTitle1);
-
-const gridDescription1 = document.createElement('div');
-gridDescription1.id = 'main-content-container__grid-description';
-gridDescription1.textContent = `Everyday, culinary masters 
-are cooking up new tastes in our kitchens.`;
-gridDescription1.style.padding = '18px 0 0 0';
-gridDescription1.style.lineHeight = '24px';
-tripleGridSubDiv1.appendChild(gridDescription1);
 
 const buttonsTripleGrid = document.createElement('div');
 buttonsTripleGrid.id = 'main-content-container__buttons-triple-grid';
@@ -349,78 +316,200 @@ buttonsTripleGrid.style.columnGap = '23px';
 buttonsTripleGrid.style.marginBottom = '158px';
 mainContentContainer.appendChild(buttonsTripleGrid);
 
-const buttonsTripleGridSubDiv1 = document.createElement('div');
-buttonsTripleGridSubDiv1.id = 'main-content-container__buttons-triple-grid-sub-div';
-buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv1);
+function createTripleGridElement(options) {
+    const {subId, imgId, imgSrc, imgAlt, titleId, title,
+    descriptionId, descriptionText,
+    buttonsDivId, buttonsLinkId, buttonsHref,
+    buttonsId, buttonsText} = options;
+    
+    const tripleGridSubDiv = document.createElement('div');
+    tripleGridSubDiv.id = subId;
+    tripleGridContainer.appendChild(tripleGridSubDiv);
+    
+    const gridImage = document.createElement('img');
+    gridImage.id = imgId;
+    gridImage.src = imgSrc;
+    gridImage.alt = imgAlt;
+    gridImage.style.width = '100%';
+    tripleGridSubDiv.appendChild(gridImage);
 
-const gridButtons1Link = document.createElement('a');
-gridButtons1Link.id = 'main-content-container__grid-buttons1-link';
-gridButtons1Link.href = `https://www.mcdonalds.com/us/en-us/about-our-
-food/meet-our-food-experts/our-chefs.html`;
-buttonsTripleGridSubDiv1.appendChild(gridButtons1Link);
+    const gridTitle = document.createElement('div');
+    gridTitle.id = titleId;
+    gridTitle.textContent = title;
+    gridTitle.style.fontSize = '36px';
+    gridTitle.style.fontWeight = '700';
+    gridTitle.style.padding = '45px 0 18px 0';
+    tripleGridSubDiv.appendChild(gridTitle);
 
-const gridButtons1 = document.createElement('button');
-gridButtons1.id = 'main-content-container__grid-buttons1';
-gridButtons1.textContent = 'Meet Our Chefs';
-gridButtons1.style.backgroundColor = primaryButtonColor;
-gridButtons1.style.border = 'none';
-gridButtons1.style.borderRadius = '4px';
-gridButtons1.style.marginTop = '35px';
-gridButtons1.style.padding = '13px 25px';
-gridButtons1.style.fontSize = '16px';
-gridButtons1.style.lineHeight = '24px';
-gridButtons1.style.cursor = 'pointer';
-gridButtons1Link.appendChild(gridButtons1);
+    const gridDescription = document.createElement('div');
+    gridDescription.id = descriptionId;
+    gridDescription.textContent = descriptionText;
+    gridDescription.style.padding = '18px 0 0 0';
+    gridDescription.style.lineHeight = '24px';
+    tripleGridSubDiv.appendChild(gridDescription);
 
-const tripleGridSubDiv2 = document.createElement('div');
-tripleGridSubDiv2.id = 'main-content-container__triple-grid-sub-div2';
-tripleGridContainer.appendChild(tripleGridSubDiv2);
+    const buttonsTripleGridSubDiv = document.createElement('div');
+    buttonsTripleGridSubDiv.id = buttonsDivId;
+    tripleGridSubDiv.appendChild(buttonsTripleGridSubDiv);
+    
+    const gridButtonsLink = document.createElement('a');
+    gridButtonsLink.id = buttonsLinkId;
+    gridButtonsLink.href = buttonsHref;
+    buttonsTripleGridSubDiv.appendChild(gridButtonsLink);
+    
+    const gridButtons = document.createElement('button');
+    gridButtons.id = buttonsId;
+    gridButtons.textContent = buttonsText;
+    gridButtons.style.backgroundColor = primaryButtonColor; // assuming primaryButtonColor is defined elsewhere
+    gridButtons.style.border = 'none';
+    gridButtons.style.borderRadius = '4px';
+    gridButtons.style.marginTop = '35px';
+    gridButtons.style.padding = '13px 25px';
+    gridButtons.style.fontSize = '16px';
+    gridButtons.style.lineHeight = '24px';
+    gridButtons.style.cursor = 'pointer';
+    gridButtonsLink.appendChild(gridButtons);
+}
 
-const gridImage2 = document.createElement('img');
-gridImage2.id = 'main-content-container__grid-image2';
-gridImage2.src = 'images/Cynthia_G_3Col_376x252_Desktop_3-column-desktop.jpeg';
-gridImage2.style.width = '100%';
-tripleGridSubDiv2.appendChild(gridImage2);
+createTripleGridElement({
+    subId: 'main-content-container__triple-grid-sub-div1',
+    imgId: 'main-content-container__grid-image',
+    imgSrc: 'images/Our_Chefs_3col_760x508_3-column-desktop.jpeg',
+    imgAlt: 'food-experts-main-image',
+    titleId: 'main-content-container__grid-title',
+    title: 'Our Chefs',
+    descriptionId: 'main-content-container__grid-description',
+    descriptionText: `Everyday, culinary masters are cooking up new tastes in our kitchens.`,
+    buttonsDivId: 'main-content-container__buttons-triple-grid-sub-div',
+    buttonsLinkId: 'main-content-container__grid-buttons1-link',
+    buttonsHref: `https://www.mcdonalds.com/us/en-us/about-our-food/meet-our-food-experts/our-chefs.html`,
+    buttonsId: 'main-content-container__grid-buttons1',
+    buttonsText: 'Meet Our Chefs'
+});
 
-const gridTitle2 = document.createElement('div');
-gridTitle2.id = 'main-content-container__grid-title2';
-gridTitle2.textContent = 'Our Dietitians';
-gridTitle2.style.fontSize = '36px';
-gridTitle2.style.fontWeight = '700';
-gridTitle2.style.padding = '45px 0 18px 0';
-tripleGridSubDiv2.appendChild(gridTitle2);
+createTripleGridElement({
+    subId: 'main-content-container__triple-grid-sub-div2',
+    imgId: 'main-content-container__grid-image',
+    imgSrc: 'images/Cynthia_G_3Col_376x252_Desktop_3-column-desktop.jpeg',
+    imgAlt: 'food-experts-main-image',
+    titleId: 'main-content-container__grid-title',
+    title: 'Our Chefs',
+    descriptionId: 'main-content-container__grid-description',
+    descriptionText: `Everyday, culinary masters are cooking up new tastes in our kitchens.`,
+    buttonsDivId: 'main-content-container__buttons-triple-grid-sub-div',
+    buttonsLinkId: 'main-content-container__grid-buttons1-link',
+    buttonsHref: `https://www.mcdonalds.com/us/en-us/about-our-food/meet-our-food-experts/our-chefs.html`,
+    buttonsId: 'main-content-container__grid-buttons1',
+    buttonsText: 'Meet Our Chefs'
+});
 
-const gridDescription2 = document.createElement('div');
-gridDescription2.id = 'main-content-container__grid-description2';
-gridDescription2.textContent = `Get to know our Registered 
-Dietitian Nutritionists who add a different type of value 
-to your meal.`;
-gridDescription2.style.padding = '18px 0 0 0';
-gridDescription2.style.lineHeight = '24px';
-tripleGridSubDiv2.appendChild(gridDescription2);
+// const tripleGridSubDiv1 = document.createElement('div');
+// tripleGridSubDiv1.id = 'main-content-container__triple-grid-sub-div1';
+// tripleGridContainer.appendChild(tripleGridSubDiv1);
 
-const buttonsTripleGridSubDiv2 = document.createElement('div');
-buttonsTripleGridSubDiv2.id = 'main-content-container__buttons-triple-grid-sub-div2';
-buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv2);
+// const gridImage1 = document.createElement('img');
+// gridImage1.id = 'main-content-container__grid-image';
+// gridImage1.src = 'images/Our_Chefs_3col_760x508_3-column-desktop.jpeg';
+// gridImage1.alt = 'food-experts-main-image';
+// gridImage1.style.width = '100%';
+// tripleGridSubDiv1.appendChild(gridImage1);
 
-const gridButtons2Link = document.createElement('a');
-gridButtons2Link.id = 'main-content-container__grid-buttons2-link';
-gridButtons2Link.href = `https://www.mcdonalds.com/us/en-us/about-
-our-food/meet-our-food-experts/our-nutritionists.html`;
-buttonsTripleGridSubDiv2.appendChild(gridButtons2Link);
+// const gridTitle1 = document.createElement('div');
+// gridTitle1.id = 'main-content-container__grid-title';
+// gridTitle1.textContent = 'Our Chefs';
+// gridTitle1.style.fontSize = '36px';
+// gridTitle1.style.fontWeight = '700';
+// gridTitle1.style.padding = '45px 0 18px 0';
+// tripleGridSubDiv1.appendChild(gridTitle1);
 
-const gridButtons2 = document.createElement('button');
-gridButtons2.id = 'main-content-container__grid-buttons2';
-gridButtons2.textContent = 'Meet Our Dietitians';
-gridButtons2.style.backgroundColor = primaryButtonColor;
-gridButtons2.style.border = 'none';
-gridButtons2.style.borderRadius = '4px';
-gridButtons2.style.marginTop = '35px';
-gridButtons2.style.padding = '13px 25px';
-gridButtons2.style.fontSize = '16px';
-gridButtons2.style.lineHeight = '24px';
-gridButtons2.style.cursor = 'pointer';
-gridButtons2Link.appendChild(gridButtons2);
+// const gridDescription1 = document.createElement('div');
+// gridDescription1.id = 'main-content-container__grid-description';
+// gridDescription1.textContent = `Everyday, culinary masters 
+// are cooking up new tastes in our kitchens.`;
+// gridDescription1.style.padding = '18px 0 0 0';
+// gridDescription1.style.lineHeight = '24px';
+// tripleGridSubDiv1.appendChild(gridDescription1);
+
+// const buttonsTripleGrid = document.createElement('div');
+// buttonsTripleGrid.id = 'main-content-container__buttons-triple-grid';
+// buttonsTripleGrid.style.display = 'grid';
+// buttonsTripleGrid.style.gridTemplateColumns = '1fr 1fr 1fr';
+// buttonsTripleGrid.style.columnGap = '23px';
+// buttonsTripleGrid.style.marginBottom = '158px';
+// mainContentContainer.appendChild(buttonsTripleGrid);
+
+// const buttonsTripleGridSubDiv1 = document.createElement('div');
+// buttonsTripleGridSubDiv1.id = 'main-content-container__buttons-triple-grid-sub-div';
+// buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv1);
+
+// const gridButtons1Link = document.createElement('a');
+// gridButtons1Link.id = 'main-content-container__grid-buttons1-link';
+// gridButtons1Link.href = `https://www.mcdonalds.com/us/en-us/about-our-
+// food/meet-our-food-experts/our-chefs.html`;
+// buttonsTripleGridSubDiv1.appendChild(gridButtons1Link);
+
+// const gridButtons1 = document.createElement('button');
+// gridButtons1.id = 'main-content-container__grid-buttons1';
+// gridButtons1.textContent = 'Meet Our Chefs';
+// gridButtons1.style.backgroundColor = primaryButtonColor;
+// gridButtons1.style.border = 'none';
+// gridButtons1.style.borderRadius = '4px';
+// gridButtons1.style.marginTop = '35px';
+// gridButtons1.style.padding = '13px 25px';
+// gridButtons1.style.fontSize = '16px';
+// gridButtons1.style.lineHeight = '24px';
+// gridButtons1.style.cursor = 'pointer';
+// gridButtons1Link.appendChild(gridButtons1);
+
+// const tripleGridSubDiv2 = document.createElement('div');
+// tripleGridSubDiv2.id = 'main-content-container__triple-grid-sub-div2';
+// tripleGridContainer.appendChild(tripleGridSubDiv2);
+
+// const gridImage2 = document.createElement('img');
+// gridImage2.id = 'main-content-container__grid-image2';
+// gridImage2.src = 'images/Cynthia_G_3Col_376x252_Desktop_3-column-desktop.jpeg';
+// gridImage2.style.width = '100%';
+// tripleGridSubDiv2.appendChild(gridImage2);
+
+// const gridTitle2 = document.createElement('div');
+// gridTitle2.id = 'main-content-container__grid-title2';
+// gridTitle2.textContent = 'Our Dietitians';
+// gridTitle2.style.fontSize = '36px';
+// gridTitle2.style.fontWeight = '700';
+// gridTitle2.style.padding = '45px 0 18px 0';
+// tripleGridSubDiv2.appendChild(gridTitle2);
+
+// const gridDescription2 = document.createElement('div');
+// gridDescription2.id = 'main-content-container__grid-description2';
+// gridDescription2.textContent = `Get to know our Registered 
+// Dietitian Nutritionists who add a different type of value 
+// to your meal.`;
+// gridDescription2.style.padding = '18px 0 0 0';
+// gridDescription2.style.lineHeight = '24px';
+// tripleGridSubDiv2.appendChild(gridDescription2);
+
+// const buttonsTripleGridSubDiv2 = document.createElement('div');
+// buttonsTripleGridSubDiv2.id = 'main-content-container__buttons-triple-grid-sub-div2';
+// buttonsTripleGrid.appendChild(buttonsTripleGridSubDiv2);
+
+// const gridButtons2Link = document.createElement('a');
+// gridButtons2Link.id = 'main-content-container__grid-buttons2-link';
+// gridButtons2Link.href = `https://www.mcdonalds.com/us/en-us/about-
+// our-food/meet-our-food-experts/our-nutritionists.html`;
+// buttonsTripleGridSubDiv2.appendChild(gridButtons2Link);
+
+// const gridButtons2 = document.createElement('button');
+// gridButtons2.id = 'main-content-container__grid-buttons2';
+// gridButtons2.textContent = 'Meet Our Dietitians';
+// gridButtons2.style.backgroundColor = primaryButtonColor;
+// gridButtons2.style.border = 'none';
+// gridButtons2.style.borderRadius = '4px';
+// gridButtons2.style.marginTop = '35px';
+// gridButtons2.style.padding = '13px 25px';
+// gridButtons2.style.fontSize = '16px';
+// gridButtons2.style.lineHeight = '24px';
+// gridButtons2.style.cursor = 'pointer';
+// gridButtons2Link.appendChild(gridButtons2);
 
 const tripleGridSubDiv3 = document.createElement('div');
 tripleGridSubDiv3.id = 'main-content-container__triple-grid-sub-div3';
