@@ -126,59 +126,56 @@ topRightHeaderLinksContainer.style.display = 'flex';
 topRightHeaderLinksContainer.style.alignItems = 'center';
 topHeaderLinksContainer.appendChild(topRightHeaderLinksContainer);
 
-const headerTopLinksSearch = document.createElement('a');
-headerTopLinksSearch.id = 'header__top-links-search';
-headerTopLinksSearch.href = `https://www.mcdonalds.com/us/en-us/
-search-results.html`;
-headerTopLinksSearch.style.display = 'flex';
-headerTopLinksSearch.style.justifyContent = 'center';
-headerTopLinksSearch.style.alignItems = 'center';
-headerTopLinksSearch.style.textDecoration = 'none';
-headerTopLinksSearch.style.color = primaryColor;
-headerTopLinksSearch.style.textDecoration = 'none';
-headerTopLinksSearch.style.margin = '0 30px 0 0';
-topRightHeaderLinksContainer.appendChild(headerTopLinksSearch);
+function createTopRightHeaderLinkElement(options) {
+    const {id, href, parent, id2, id2Src, id3, id3TextContent} = options;
+    
+    const linkElement = document.createElement('a');
+    linkElement.id = id;
+    linkElement.href = href;
+    linkElement.style.display = 'flex';
+    linkElement.style.justifyContent = 'center';
+    linkElement.style.alignItems = 'center';
+    linkElement.style.textDecoration = 'none';
+    linkElement.style.color = primaryColor;
+    linkElement.style.textDecoration = 'none';
+    linkElement.style.margin = '0 30px 0 0';
 
-const searchIcon = document.createElement('img');
-searchIcon.id = 'header__search-icon';
-searchIcon.src = 'icons/search-icon.png';
-searchIcon.style.width = '16px';
-searchIcon.style.height = '15px';
-searchIcon.style.marginRight = '5px';
-headerTopLinksSearch.appendChild(searchIcon);
+    const icon = document.createElement('img');
+    icon.id = id2;
+    icon.src = id2Src;
+    icon.style.width = '16px';
+    icon.style.height = '15px';
+    icon.style.marginRight = '5px';
+    
+    const linkText = document.createElement('div');
+    linkText.id = id3;
+    linkText.textContent = id3TextContent;
+    linkText.style.lineHeight = '0px';
 
-const linkText = document.createElement('div');
-linkText.id = 'header__link-text';
-linkText.textContent = 'Search';
-linkText.style.lineHeight = '0px';
-headerTopLinksSearch.appendChild(linkText);
+    linkElement.appendChild(icon);
+    linkElement.appendChild(linkText);
+    parent.appendChild(linkElement);
+}
 
-const headerTopLinksLocation = document.createElement('a');
-headerTopLinksLocation.id = 'header__top-links-location';
-headerTopLinksLocation.href = `https://www.mcdonalds.com/us/
-en-us/restaurant-locator.html`;
-headerTopLinksLocation.style.display = 'flex';
-headerTopLinksLocation.style.justifyContent = 'center';
-headerTopLinksLocation.style.alignItems = 'center';
-headerTopLinksLocation.style.textDecoration = 'none';
-headerTopLinksLocation.style.color = customLinkColor;
-headerTopLinksLocation.style.textDecoration = 'underline';
-headerTopLinksLocation.style.margin = '0 30px 0 0';
-topRightHeaderLinksContainer.appendChild(headerTopLinksLocation);
+createTopRightHeaderLinkElement({
+    id: 'header__top-links-search', 
+    href: `https://www.mcdonalds.com/us/en-us/search-results.html`, 
+    parent: topRightHeaderLinksContainer, 
+    id2: 'header__search-icon', 
+    id2Src: 'icons/search-icon.png', 
+    id3: 'header__link-text', 
+    id3TextContent: 'Search'
+});
 
-const locationPinIcon = document.createElement('img');
-locationPinIcon.id = 'header__location-pin-icon';
-locationPinIcon.src = 'icons/location-pin.png';
-locationPinIcon.style.width = '17px';
-locationPinIcon.style.height = '19px';
-locationPinIcon.style.marginRight = '5px';
-headerTopLinksLocation.appendChild(locationPinIcon);
-
-const linkTextLocation = document.createElement('div');
-linkTextLocation.id = 'header__link-text-location';
-linkTextLocation.textContent = 'Change your Location';
-linkTextLocation.style.lineHeight = '0px';
-headerTopLinksLocation.appendChild(linkTextLocation);
+createTopRightHeaderLinkElement({
+    id: 'header__top-links-location', 
+    href: `https://www.mcdonalds.com/us/en-us/restaurant-locator.html`, 
+    parent: topRightHeaderLinksContainer, 
+    id2: 'header__location-pin-icon', 
+    id2Src: 'icons/location-pin.png', 
+    id3: 'header__link-text-location', 
+    id3TextContent: 'Change your Location'
+});
 
 const orderNowButton = document.createElement('button');
 orderNowButton.id = 'header__order-now-button';
