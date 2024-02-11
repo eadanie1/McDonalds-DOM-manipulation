@@ -1,25 +1,19 @@
 
 // GENERAL: BODY
 
-const primaryFonStack = `system-ui, -apple-system, 
+const primaryFontProperties = `16px/22px system-ui, -apple-system, 
 BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 
 Open Sans, Helvetica Neue, sans-serif`;
+const primaryColor = 'rgb(41,41,41)';
+const customLinkColor = 'rgb(0,107,174)';
+const customBorderColor = 'rgb(206,206,206)';
 
 document.body.style.margin = '0';
-document.body.style.fontFamily = primaryFonStack;
-document.body.style.fontSize = '16px';
-document.body.style.color = 'rgb(41,41,41)';
-document.body.style.lineHeight = '22px';
-
-// GENERAL: ANCHOR ELEMENTS
-
-const allLinks = document.querySelectorAll('a');
-allLinks.forEach(link => {
-    link.style.color = 'rgb(41,41,41)';
-    link.style.textDecoration = 'none';
-});
+document.body.style.font = primaryFontProperties;
+document.body.style.color = primaryColor;
 
 // GENERAL: BUTTONS
+const primaryButtonColor = 'rgb(255, 188, 13)';
 
 const allButtons = document.querySelectorAll('button');
 allButtons.forEach(button => {
@@ -27,13 +21,12 @@ allButtons.forEach(button => {
 });
 
 // HEADER CONTAINER AND HEADER
-
-// STILL NEED TO REFACTOR CERTAIN CODE BLOCKS
+const shadowBaseProperties = '0,0,0';
 
 const header = document.createElement('header');
 header.id = 'header';
 header.style.height = '118px';
-header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.06)';
+header.style.boxShadow = `0 2px 5px rgba(${shadowBaseProperties},0.06)`;
 header.style.display = 'flex';
 header.style.justifyContent = 'center';
 header.style.padding = '15px 0 0 0';
@@ -92,7 +85,7 @@ const headerTopLinksLanguage = document.createElement('a');
 headerTopLinksLanguage.id = 'header__top-links-language';
 headerTopLinksLanguage.href = '';
 headerTopLinksLanguage.textContent = 'Language';
-headerTopLinksLanguage.style.color = 'rgb(41,41,41)';
+headerTopLinksLanguage.style.color = primaryColor;
 headerTopLinksLanguage.style.textDecoration = 'none';
 headerTopLinksLanguage.style.margin = '0 30px 0 0';
 topLeftHeaderLinksContainer.appendChild(headerTopLinksLanguage);
@@ -115,7 +108,7 @@ headerTopLinksEmail.id = 'header__top-links-email';
 headerTopLinksEmail.href = `https://www.mcdonalds.com/us/en-us/mcdonalds-
 email-signup.html`;
 headerTopLinksEmail.textContent = 'Sign Up for Email';
-headerTopLinksEmail.style.color = 'rgb(41,41,41)';
+headerTopLinksEmail.style.color = primaryColor;
 headerTopLinksEmail.style.textDecoration = 'none';
 headerTopLinksEmail.style.margin = '0 30px 0 0';
 topLeftHeaderLinksContainer.appendChild(headerTopLinksEmail);
@@ -125,7 +118,7 @@ headerTopLinksCareers.id = 'header__top-links-careers';
 headerTopLinksCareers.href = `https://www.mcdonalds.com/us/en-us/
 mcdonalds-careers.html`;
 headerTopLinksCareers.textContent = 'Careers';
-headerTopLinksCareers.style.color = 'rgb(41,41,41)';
+headerTopLinksCareers.style.color = primaryColor;
 headerTopLinksCareers.style.textDecoration = 'none';
 headerTopLinksCareers.style.margin = '0 30px 0 0';
 topLeftHeaderLinksContainer.appendChild(headerTopLinksCareers);
@@ -144,7 +137,7 @@ headerTopLinksSearch.style.display = 'flex';
 headerTopLinksSearch.style.justifyContent = 'center';
 headerTopLinksSearch.style.alignItems = 'center';
 headerTopLinksSearch.style.textDecoration = 'none';
-headerTopLinksSearch.style.color = 'rgb(41,41,41)';
+headerTopLinksSearch.style.color = primaryColor;
 headerTopLinksSearch.style.textDecoration = 'none';
 headerTopLinksSearch.style.margin = '0 30px 0 0';
 topRightHeaderLinksContainer.appendChild(headerTopLinksSearch);
@@ -171,7 +164,7 @@ headerTopLinksLocation.style.display = 'flex';
 headerTopLinksLocation.style.justifyContent = 'center';
 headerTopLinksLocation.style.alignItems = 'center';
 headerTopLinksLocation.style.textDecoration = 'none';
-headerTopLinksLocation.style.color = 'rgb(0,107,174)';
+headerTopLinksLocation.style.color = customLinkColor;
 headerTopLinksLocation.style.textDecoration = 'underline';
 headerTopLinksLocation.style.margin = '0 30px 0 0';
 topRightHeaderLinksContainer.appendChild(headerTopLinksLocation);
@@ -193,7 +186,7 @@ headerTopLinksLocation.appendChild(linkTextLocation);
 const orderNowButton = document.createElement('button');
 orderNowButton.id = 'header__order-now-button';
 orderNowButton.textContent = 'Order Now';
-orderNowButton.style.backgroundColor = 'rgb(255, 188, 13)';
+orderNowButton.style.backgroundColor = primaryButtonColor;
 orderNowButton.style.border = 'none';
 orderNowButton.style.borderRadius = '4px';
 orderNowButton.style.padding = '8px 25px';
@@ -244,7 +237,7 @@ function createLinkListItem(id, href, textContent, parent) {
     link.href = href;
     link.textContent = textContent;
     link.style.listStyleType = 'none';
-    link.style.color = 'rgb(41,41,41)';
+    link.style.color = primaryColor;
     link.style.textDecoration = 'none';
 
     listItem.appendChild(link);
@@ -375,7 +368,7 @@ buttonsTripleGridSubDiv1.appendChild(gridButtons1Link);
 const gridButtons1 = document.createElement('button');
 gridButtons1.id = 'main-content-container__grid-buttons1';
 gridButtons1.textContent = 'Meet Our Chefs';
-gridButtons1.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons1.style.backgroundColor = primaryButtonColor;
 gridButtons1.style.border = 'none';
 gridButtons1.style.borderRadius = '4px';
 gridButtons1.style.marginTop = '35px';
@@ -425,7 +418,7 @@ buttonsTripleGridSubDiv2.appendChild(gridButtons2Link);
 const gridButtons2 = document.createElement('button');
 gridButtons2.id = 'main-content-container__grid-buttons2';
 gridButtons2.textContent = 'Meet Our Dietitians';
-gridButtons2.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons2.style.backgroundColor = primaryButtonColor;
 gridButtons2.style.border = 'none';
 gridButtons2.style.borderRadius = '4px';
 gridButtons2.style.marginTop = '35px';
@@ -474,7 +467,7 @@ buttonsTripleGridSubDiv3.appendChild(gridButtons3Link);
 const gridButtons3 = document.createElement('button');
 gridButtons3.id = 'main-content-container__grid-buttons3';
 gridButtons3.textContent = 'See Supplier Stories';
-gridButtons3.style.backgroundColor = 'rgb(255, 188, 13)';
+gridButtons3.style.backgroundColor = primaryButtonColor;
 gridButtons3.style.border = 'none';
 gridButtons3.style.borderRadius = '4px';
 gridButtons3.style.marginTop = '35px';
@@ -516,7 +509,7 @@ function createListItemLink(id, href, textContent, parent) {
 
     link.id = `${id}`-link;
     link.href = href;
-    link.style.color = 'rgb(41,41,41)';
+    link.style.color = primaryColor;
     link.style.textDecoration = 'none';
     link.style.listStyleType = 'none';
     link.style.width = '180px';
@@ -819,7 +812,7 @@ socialMediaIcons22Link.appendChild(socialMediaIcons22);
 
 const footer = document.createElement('footer');
 footer.id = 'footer';
-footer.style.borderTop = '1px solid rgb(206,206,206)';
+footer.style.borderTop = `1px solid ${customBorderColor}`;
 footer.style.display = 'flex';
 footer.style.justifyContent = 'space-between';
 footer.style.alignItems = 'start';
@@ -848,7 +841,7 @@ function createListItemLink2(id, href, textContent, parent) {
 
     listItem.id = id;
     listItem.textContent = textContent;
-    listItem.style.color = 'rgb(41,41,41)';
+    listItem.style.color = primaryColor;
     listItem.style.display = 'inline-block';
     listItem.style.listStyleType = 'none';
     listItem.style.padding = '0 40px 0 0';
