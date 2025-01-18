@@ -821,3 +821,10 @@ copyrightText.style.textAlign = 'right';
 copyrightText.style.padding = '12px 0 0 44px';
 copyrightText.style.width = '280px';
 nestedFlexboxSubDiv2.appendChild(copyrightText);
+
+// basic example of reduce method in JS
+const array1 = [1,2,3];
+const array2 = [1,2,3,4,5];
+const array3 = [1,2,3,4,5,6,7];
+const reducedArray = array3.reduce((acc, curr) => acc + curr);
+console.log('reducedArray: ', reducedArray);
